@@ -5,9 +5,9 @@ export default function useTimeline() {
     const { scrollYProgress } = useScroll();
 
     const progress = useSpring(scrollYProgress, {
-        stiffness: 80,
-        damping: 25,
-        mass: 0.2
+        stiffness: 35,
+        damping: 20,
+        mass: 1
     });
 
     return progress;

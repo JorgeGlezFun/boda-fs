@@ -65,35 +65,35 @@ export default function FinalMessage({ progress }) {
 
                 <motion.p
                     style={{ opacity: line1Opacity }}
-                    className="text-xl leading-relaxed"
+                    className="text-4xl leading-relaxed font-cinzel"
                 >
                     Hay momentos que
                 </motion.p>
 
                 <motion.p
                     style={{ opacity: line2Opacity }}
-                    className="mt-4 text-xl leading-relaxed"
+                    className="mt-4 text-4xl leading-relaxed font-cinzel"
                 >
                     Merecen ser eternos. Y
                 </motion.p>
 
                 <motion.p
                     style={{ opacity: line3Opacity }}
-                    className="mt-4 text-xl leading-relaxed"
+                    className="mt-4 text-4xl leading-relaxed font-cinzel"
                 >
                     Este queremos
                 </motion.p>
 
                 <motion.p
                     style={{ opacity: line4Opacity }}
-                    className="mt-4 text-xl leading-relaxed"
+                    className="mt-4 text-4xl leading-relaxed font-cinzel"
                 >
                     Compartirlo contigo.
                 </motion.p>
 
                 <motion.p
                     style={{ opacity: line5Opacity }}
-                    className="mt-4 text-xl leading-relaxed"
+                    className="mt-4 text-3xl leading-relaxed font-pinyon"
                 >
                     Laura y Yeray
                 </motion.p>

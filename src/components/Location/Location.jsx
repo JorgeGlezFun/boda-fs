@@ -22,11 +22,6 @@ export default function Location({ progress }) {
     );
 
     // Aparición escalonada de cada línea
-    const titleOpacity = useTransform(
-        progress,
-        [0.10, 0.25],
-        [0, 1]
-    );
 
     const placeOpacity = useTransform(
         progress,
@@ -51,25 +46,19 @@ export default function Location({ progress }) {
         >
             <div className="flex flex-col items-center text-center text-white">
 
-                <motion.p
-                    style={{ opacity: titleOpacity }}
-                    className="mb-6 text-lg tracking-[0.5rem] uppercase"
-                >
-                    Ceremony
-                </motion.p>
 
                 <motion.h2
                     style={{ opacity: placeOpacity }}
-                    className="text-5xl"
+                    className="text-5xl font-pinyon "
                 >
-                    Iglesia de Santa María
+                    Iglesia de Santa María de Jesús
                 </motion.h2>
 
                 <motion.p
                     style={{ opacity: cityOpacity }}
-                    className="mt-6 text-xl tracking-[0.25rem]"
+                    className="mt-6 text-xl font-pinyon"
                 >
-                    Córdoba · España
+                    Lebrija
                 </motion.p>
 
             </div>

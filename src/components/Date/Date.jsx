@@ -53,7 +53,7 @@ export default function Date({ progress }) {
 
                 <motion.h2
                     style={{ opacity: dayOpacity }}
-                    className="text-8xl"
+                    className="text-8xl font-cinzel"
                 >
                     24
                 </motion.h2>
@@ -62,20 +62,20 @@ export default function Date({ progress }) {
                     style={{ opacity: monthOpacity }}
                     className="my-6 flex items-center gap-6"
                 >
-                    <div className="h-px w-20 bg-white/70" />
+                    
 
-                    <p className="tracking-[0.5rem] uppercase text-xl">
-                        April
+                    <p className="tracking-[0.5rem] uppercase text-8xl font-cinzel-decorative">
+                        04
                     </p>
 
-                    <div className="h-px w-20 bg-white/70" />
+                    
                 </motion.div>
 
                 <motion.h3
                     style={{ opacity: yearOpacity }}
-                    className="text-5xl"
+                    className="text-8xl font-cinzel"
                 >
-                    2027
+                    27
                 </motion.h3>
 
             </div>

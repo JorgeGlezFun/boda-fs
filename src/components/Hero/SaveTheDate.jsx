@@ -27,19 +27,17 @@ export default function SaveTheDate({ progress }) {
 
         >
 
-            <p className="tracking-[0.8rem] uppercase text-lg">
-
+            <p className="tracking-[0.8rem] uppercase text-7xl font-cinzel">
                 SAVE
-
             </p>
 
-            <h1 className="text-7xl italic my-2">
+            <h1 className="text-5xl italic my-2 font-pinyon">
 
                 the
 
             </h1>
 
-            <p className="tracking-[1rem] uppercase text-lg">
+            <p className="tracking-[1rem] uppercase text-7xl font-cinzel">
 
                 DATE
 

@@ -69,13 +69,13 @@ export default function Countdown({ progress }) {
         >
             <div className="flex flex-col items-center text-white">
 
-                <p className="mb-8 text-2xl tracking-[0.35rem] uppercase">
+                <p className="mb-8 text-2xl tracking-[0.35rem] uppercase font-cinzel">
                     Nos vemos en:
                 </p>
 
                 <div className="flex items-center gap-4 text-6xl">
 
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center font-pinyon">
                         <span>{timeLeft.days}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Días
@@ -84,7 +84,7 @@ export default function Countdown({ progress }) {
 
                     <span>:</span>
 
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center font-pinyon">
                         <span>{timeLeft.hours}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Horas
@@ -93,19 +93,19 @@ export default function Countdown({ progress }) {
 
                     <span>:</span>
 
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center font-pinyon">
                         <span>{timeLeft.minutes}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
-                            Min
+                            Minutos
                         </span>
                     </div>
 
                     <span>:</span>
 
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center font-pinyon">
                         <span>{timeLeft.seconds}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
-                            Seg
+                            Segundos
                         </span>
                     </div>
 

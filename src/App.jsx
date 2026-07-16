@@ -3,7 +3,6 @@ import Date from "./components/Date/Date";
 import Location from "./components/Location/Location";
 import FinalMessage from "./components/FinalMessage/FinalMessage";
 import Countdown from "./components/Countdown/Countdown";
-
 import useTimeline from "./hooks/useTimeline";
 import useRange from "./hooks/useRange";
 
@@ -18,7 +17,7 @@ function App() {
 
     return (
         <>
-            <div className="h-[600vh]" />
+            <div className="h-[1500vh]" />
             <main className="fixed inset-0 overflow-hidden">
                 <Hero progress={heroProgress} />
                 <Date progress={dateProgress} />

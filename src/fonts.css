@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Pinyon+Script&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+    --font-cinzel: "Cinzel", serif;
+    --font-cinzel-decorative: "Cinzel Decorative", serif;
+    --font-pinyon: "Pinyon Script", cursive;
+}
