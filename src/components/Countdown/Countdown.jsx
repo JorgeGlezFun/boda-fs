@@ -68,49 +68,35 @@ export default function Countdown({ progress }) {
             }}
         >
             <div className="flex flex-col items-center text-white">
-
                 <p className="mb-8 text-2xl tracking-[0.35rem] uppercase font-cinzel">
                     Nos vemos en:
                 </p>
-
-                <div className="flex xl:flex-row flex-col items-center gap-4 text-6xl">
-
-                    <div className="flex flex-row xl:flex-col items-center font-cinzel gap-x-8 w-48 xl:gap-x-0">
+                <div className="flex 2xl:flex-row flex-col items-center gap-4 2xl:gap-x-10 text-6xl">
+                    <div className="flex flex-row 2xl:flex-col items-center font-cinzel gap-x-8 w-full 2xl:gap-x-0">
                         <span>{timeLeft.days}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Días
                         </span>
                     </div>
-
-                    <span className="hidden xl:flex">:</span>
-
-                    <div className="flex flex-row xl:flex-col items-center font-cinzel gap-x-8 w-48 xl:gap-x-0">
+                    <div className="flex flex-row 2xl:flex-col items-center font-cinzel gap-x-8 w-full 2xl:gap-x-0">
                         <span>{timeLeft.hours}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Horas
                         </span>
                     </div>
-
-                    <span className="hidden xl:flex">:</span>
-
-                    <div className="flex flex-row xl:flex-col items-center font-cinzel gap-x-8 w-48 xl:gap-x-0">
+                    <div className="flex flex-row 2xl:flex-col items-center font-cinzel gap-x-8 w-full 2xl:gap-x-0">
                         <span>{timeLeft.minutes}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Minutos
                         </span>
                     </div>
-
-                    <span className="hidden xl:flex">:</span>
-
-                    <div className="flex flex-row xl:flex-col items-center font-cinzel gap-x-8 w-48 xl:gap-x-0">
+                    <div className="flex flex-row 2xl:flex-col items-center font-cinzel gap-x-8 w-full 2xl:gap-x-0">
                         <span>{timeLeft.seconds}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Segundos
                         </span>
                     </div>
-
                 </div>
-
             </div>
         </motion.section>
     );
