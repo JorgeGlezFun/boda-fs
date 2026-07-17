@@ -75,7 +75,7 @@ export default function Countdown({ progress }) {
 
                 <div className="flex items-center gap-4 text-6xl">
 
-                    <div className="flex flex-col items-center font-pinyon">
+                    <div className="flex flex-col items-center font-cinzel">
                         <span>{timeLeft.days}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Días
@@ -84,7 +84,7 @@ export default function Countdown({ progress }) {
 
                     <span>:</span>
 
-                    <div className="flex flex-col items-center font-pinyon">
+                    <div className="flex flex-col items-center font-cinzel">
                         <span>{timeLeft.hours}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Horas
@@ -93,7 +93,7 @@ export default function Countdown({ progress }) {
 
                     <span>:</span>
 
-                    <div className="flex flex-col items-center font-pinyon">
+                    <div className="flex flex-col items-center font-cinzel">
                         <span>{timeLeft.minutes}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Minutos
@@ -102,7 +102,7 @@ export default function Countdown({ progress }) {
 
                     <span>:</span>
 
-                    <div className="flex flex-col items-center font-pinyon">
+                    <div className="flex flex-col items-center font-cinzel">
                         <span>{timeLeft.seconds}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Segundos
