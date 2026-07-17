@@ -71,26 +71,26 @@ export default function Countdown({ progress }) {
                 <p className="mb-8 text-2xl tracking-[0.35rem] uppercase font-cinzel">
                     Nos vemos en:
                 </p>
-                <div className="flex 2xl:flex-row flex-col items-center gap-4 2xl:gap-x-10 text-6xl">
-                    <div className="flex flex-row 2xl:flex-col items-center font-cinzel gap-x-8 w-full 2xl:gap-x-0">
+                <div className="flex flex-col items-center gap-4 text-6xl">
+                    <div className="flex flex-row items-center font-cinzel gap-x-8 w-full">
                         <span>{timeLeft.days}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Días
                         </span>
                     </div>
-                    <div className="flex flex-row 2xl:flex-col items-center font-cinzel gap-x-8 w-full 2xl:gap-x-0">
+                    <div className="flex flex-row items-center font-cinzel gap-x-8 w-full">
                         <span>{timeLeft.hours}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Horas
                         </span>
                     </div>
-                    <div className="flex flex-row 2xl:flex-col items-center font-cinzel gap-x-8 w-full 2xl:gap-x-0">
+                    <div className="flex flex-row items-center font-cinzel gap-x-8 w-full">
                         <span>{timeLeft.minutes}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Minutos
                         </span>
                     </div>
-                    <div className="flex flex-row 2xl:flex-col items-center font-cinzel gap-x-8 w-full 2xl:gap-x-0">
+                    <div className="flex flex-row items-center font-cinzel gap-x-8 w-full">
                         <span>{timeLeft.seconds}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Segundos
