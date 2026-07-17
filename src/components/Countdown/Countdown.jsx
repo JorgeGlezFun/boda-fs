@@ -73,36 +73,36 @@ export default function Countdown({ progress }) {
                     Nos vemos en:
                 </p>
 
-                <div className="flex items-center gap-4 text-6xl">
+                <div className="flex xl:flex-row flex-col items-center gap-4 text-6xl">
 
-                    <div className="flex flex-col items-center font-cinzel">
+                    <div className="flex flex-row xl:flex-col items-center font-cinzel gap-x-8 w-48 xl:gap-x-0">
                         <span>{timeLeft.days}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Días
                         </span>
                     </div>
 
-                    <span>:</span>
+                    <span className="hidden xl:flex">:</span>
 
-                    <div className="flex flex-col items-center font-cinzel">
+                    <div className="flex flex-row xl:flex-col items-center font-cinzel gap-x-8 w-48 xl:gap-x-0">
                         <span>{timeLeft.hours}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Horas
                         </span>
                     </div>
 
-                    <span>:</span>
+                    <span className="hidden xl:flex">:</span>
 
-                    <div className="flex flex-col items-center font-cinzel">
+                    <div className="flex flex-row xl:flex-col items-center font-cinzel gap-x-8 w-48 xl:gap-x-0">
                         <span>{timeLeft.minutes}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Minutos
                         </span>
                     </div>
 
-                    <span>:</span>
+                    <span className="hidden xl:flex">:</span>
 
-                    <div className="flex flex-col items-center font-cinzel">
+                    <div className="flex flex-row xl:flex-col items-center font-cinzel gap-x-8 w-48 xl:gap-x-0">
                         <span>{timeLeft.seconds}</span>
                         <span className="mt-2 text-sm tracking-[0.25rem] uppercase">
                             Segundos
