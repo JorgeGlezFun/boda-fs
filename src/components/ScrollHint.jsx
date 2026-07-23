@@ -11,9 +11,11 @@ export default function ScrollHint({ visible }) {
                     transition={{ duration: 0.35, ease: "easeOut" }}
                     className="fixed bottom-10 left-1/2 z-10 -translate-x-1/2 pointer-events-none"
                 >
-                    <div className="flex flex-col items-center gap-0 rounded-full border border-white/20 bg-black/35 px-6 py-4 backdrop-blur-md shadow-2xl">
-                        <p className="font-cinzel text-sm tracking-[0.25rem] uppercase text-white">
-                            Continúa haciendo scroll
+                    <div className="flex flex-col w-64 items-center rounded-full border border-white/20 bg-black/35 px-6 py-4 backdrop-blur-md shadow-2xl">
+                        <p className="flex flex-col font-cinzel text-center text-sm tracking-[0.25rem] uppercase text-white">
+                            <span>Continúa</span>
+                            <span>haciendo</span>
+                            <span>scroll</span>
                         </p>
 
                         <motion.div

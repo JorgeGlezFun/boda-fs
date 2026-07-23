@@ -35,7 +35,7 @@ function App() {
             if (currentProgress < 0.85) {
                 setShowScrollHint(true);
             }
-        }, 5000);
+        }, 3000);
     };
 
     // Escuchamos scroll y touch
