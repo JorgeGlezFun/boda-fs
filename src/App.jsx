@@ -1,83 +1,108 @@
+import { useEffect, useState } from "react";
+
 import Hero from "./components/Hero/Hero";
+import SaveTheDate from "./components/Hero/SaveTheDate";
+import CoupleNames from "./components/Hero/CoupleNames";
 import Date from "./components/Date/Date";
 import Location from "./components/Location/Location";
 import FinalMessage from "./components/FinalMessage/FinalMessage";
 import Countdown from "./components/Countdown/Countdown";
-import useTimeline from "./hooks/useTimeline";
-import useRange from "./hooks/useRange";
-import ScrollHint from "./components/ScrollHint";
 import BackgroundManager from "./components/BackgroundManager";
-import { useEffect, useRef, useState } from "react";
 
 function App() {
+    const [scene, setScene] = useState(0);
 
-    const progress = useTimeline();
-    const heroProgress = useRange(progress, 0.00, 0.20);
-    const dateProgress = useRange(progress, 0.18, 0.40);
-    const locationProgress = useRange(progress, 0.38, 0.60);
-    const finalMessageProgress = useRange(progress, 0.58, 0.80);
-    const countdownProgress = useRange(progress, 0.78, 1.00);
+    const totalScenes = 7;
 
-    const [showScrollHint, setShowScrollHint] = useState(false);
-    const inactivityTimer = useRef(null);
+    const nextScene = () => {
+        setScene((current) => Math.min(current + 1, totalScenes - 1));
+    };
 
+    const prevScene = () => {
+        setScene((current) => Math.max(current - 1, 0));
+    };
+
+    // Teclado en desktop
     useEffect(() => {
-    const resetTimer = () => {
-        // Oculta el mensaje al volver a hacer scroll
-        setShowScrollHint(false);
-
-        // Reinicia el temporizador
-        clearTimeout(inactivityTimer.current);
-
-        inactivityTimer.current = setTimeout(() => {
-            // Solo mostrar si NO estamos en Countdown
-            const currentProgress = progress.get();
-
-            if (currentProgress < 0.85) {
-                setShowScrollHint(true);
+        const handleKeyDown = (e) => {
+            if (e.key === "ArrowDown" || e.key === " " || e.key === "Enter") {
+                e.preventDefault();
+                nextScene();
             }
-        }, 3000);
-    };
 
-    // Escuchamos scroll y touch
-    window.addEventListener("wheel", resetTimer, { passive: true });
-    window.addEventListener("touchmove", resetTimer, { passive: true });
+            if (e.key === "ArrowUp") {
+                e.preventDefault();
+                prevScene();
+            }
+        };
 
-    // Iniciar temporizador al cargar
-    resetTimer();
+        window.addEventListener("keydown", handleKeyDown);
 
-    return () => {
-        clearTimeout(inactivityTimer.current);
-        window.removeEventListener("wheel", resetTimer);
-        window.removeEventListener("touchmove", resetTimer);
-    };
-}, [progress]);
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, []);
 
     return (
-        <>
-            <div className="h-[2500vh] xl:h-[1500vh]" />
-            <main className="fixed inset-0 overflow-hidden">
+        <main
+            className="fixed inset-0 overflow-hidden bg-black touch-none"
+            onClick={nextScene}
+            onTouchEnd={nextScene}
+        >
+            <BackgroundManager scene={scene} />
 
-                <BackgroundManager
-                    progress={progress}
-                    heroProgress={heroProgress}
-                    dateProgress={dateProgress}
-                    locationProgress={locationProgress}
-                    finalMessageProgress={finalMessageProgress}
-                    countdownProgress={countdownProgress}
+            {scene === 0 && <Hero />}
+            {scene === 1 && <SaveTheDate />}
+            {scene === 2 && <CoupleNames />}
+            {scene === 3 && <Date />}
+            {scene === 4 && <Location />}
+            {scene === 5 && <FinalMessage />}
+            {scene === 6 && <Countdown />}
+
+            {scene > 0 && (
+            <button
+                onClick={(e) => {
+                    prevScene();
+                }}
+                className="absolute left-4 top-4 z-50 flex items-center gap-2 rounded-full bg-black/40 px-4 py-2 text-white backdrop-blur-sm transition hover:bg-black/60 active:scale-95"
+                aria-label="Volver a la escena anterior"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+                <span className="text-sm font-medium">Atrás</span>
+            </button>
+        )}          e.stopPropagation();
+
+        <div className="absolute bottom-6 left-1/2 z-50 flex -translate-x-1/2 gap-2">
+            {[0,1,2,3,4,5].map((i) => (
+                <button
+                    key={i}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        setScene(i);
+                    }}
+                    className={`h-2 rounded-full transition-all ${
+                        i === scene
+                            ? "w-8 bg-white"
+                            : "w-2 bg-white/40 hover:bg-white/70"
+                    }`}
+                    aria-label={`Ir a la escena ${i + 1}`}
                 />
-
-                <Hero progress={heroProgress} />
-                <Date progress={dateProgress} />
-                <Location progress={locationProgress} />
-                <FinalMessage progress={finalMessageProgress} />
-                <Countdown progress={countdownProgress} />
-
-                <ScrollHint visible={showScrollHint} />
-
-            </main>
-        </>
+            ))}
+        </div>
+ 
+        </main>
     );
-}
+
+
+    }
 
 export default App;

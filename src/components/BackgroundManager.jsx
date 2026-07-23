@@ -1,103 +1,54 @@
-import { motion, useTransform } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
-// MISMO ARCHIVO, IMPORTADO CON NOMBRES DISTINTOS
+// MISMO ARCHIVO, IMPORTADO COMO CAPAS DISTINTAS
 import heroBg from "../assets/fondo.jpg";
 import dateBg from "../assets/fondo.jpg";
 import locationBg from "../assets/fondo.jpg";
 import finalBg from "../assets/fondo.jpg";
 import countdownBg from "../assets/fondo.jpg";
 
-export default function BackgroundManager({
-    heroProgress,
-    dateProgress,
-    locationProgress,
-    finalMessageProgress,
-    countdownProgress,
-}) {
+const backgrounds = [
+{ src: heroBg, position: "0% 0%" },
+{ src: dateBg, position: "60% 0%" },
+{ src: locationBg, position: "30% 50%" },
+{ src: finalBg, position: "90% 25%" },
+{ src: countdownBg, position: "0% 100%" },
+];
 
-    const common = "absolute inset-0 h-full w-full object-cover";
+export default function BackgroundManager({ scene }) {
+const current = backgrounds[scene];
 
-    return (
-        <div className="absolute inset-0 overflow-hidden bg-black">
-
-            {/* HERO */}
+return (
+    <div className="absolute inset-0 overflow-hidden bg-black">
+        <AnimatePresence mode="wait">
             <motion.img
-                src={heroBg}
-                className={common}
+                key={scene}
+                src={current.src}
+                className="absolute inset-0 h-full w-full object-cover will-change-transform will-change-opacity"
                 style={{
-                    opacity: useTransform(
-                        heroProgress,
-                        [0.00, 0.30, 0.70, 1.00],
-                        [1, 1, 1, 0]
-                    ),
-                    scale: useTransform(heroProgress, [0, 1], [1, 1.035]),
-                    objectPosition: "0% 0%",
+                    objectPosition: current.position,
+                }}
+                initial={{
+                    opacity: 0,
+                    scale: 1.02,
+                }}
+                animate={{
+                    opacity: 1,
+                    scale: 1,
+                }}
+                exit={{
+                    opacity: 0,
+                    scale: 1.03,
+                }}
+                transition={{
+                    duration: 1.1,
+                    ease: [0.4, 0, 0.2, 1],
                 }}
             />
+        </AnimatePresence>
 
-            {/* DATE */}
-            <motion.img
-                src={dateBg}
-                className={common}
-                style={{
-                    opacity: useTransform(
-                        dateProgress,
-                        [0.00, 0.30, 0.70, 1.00],
-                        [0, 1, 1, 0]
-                    ),
-                    scale: useTransform(dateProgress, [0, 1], [1, 1.035]),
-                    objectPosition: "60% 0%",
-                }}
-            />
+        <div className="absolute inset-0 bg-black/15" />
+    </div>
+);
 
-            {/* LOCATION */}
-            <motion.img
-                src={locationBg}
-                className={common}
-                style={{
-                    opacity: useTransform(
-                        locationProgress,
-                        [0.00, 0.30, 0.70, 1.00],
-                        [0, 1, 1, 0]
-                    ),
-                    scale: useTransform(locationProgress, [0, 1], [1, 1.035]),
-                    objectPosition: "30% 50%",
-                }}
-            />
-
-            {/* FINAL MESSAGE */}
-            <motion.img
-                src={finalBg}
-                className={common}
-                style={{
-                    opacity: useTransform(
-                        finalMessageProgress,
-                        [0.00, 0.30, 0.70, 1.00],
-                        [0, 1, 1, 0]
-                    ),
-                    scale: useTransform(finalMessageProgress, [0, 1], [1, 1.035]),
-                    objectPosition: "90% 25%",
-                }}
-            />
-
-            {/* COUNTDOWN */}
-            <motion.img
-                src={countdownBg}
-                className={common}
-                style={{
-                    opacity: useTransform(
-                        countdownProgress,
-                        [0.00, 0.15],
-                        [0, 1]
-                    ),
-                    scale: useTransform(countdownProgress, [0, 1], [1, 1.035]),
-                    objectPosition: "0% 100%",
-                }}
-            />
-
-            {/* Overlay muy suave */}
-            <div className="absolute inset-0 bg-black/10" />
-
-        </div>
-    );
 }

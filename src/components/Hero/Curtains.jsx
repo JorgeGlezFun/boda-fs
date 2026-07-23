@@ -1,64 +1,33 @@
-import { motion, useTransform } from "framer-motion";
-import portada from "../../assets/fondo.jpg";
-export default function Curtains({ progress }) {
+import { motion } from "framer-motion";
 
-    // Movimiento de las puertas
-    const leftX = useTransform(
-        progress,
-        [0, 0.35],
-        ["0%", "-100%"]
-    );
-
-    const rightX = useTransform(
-        progress,
-        [0, 0.35],
-        ["0%", "100%"]
-    );
-
-    // Opacidad de la sombra
-    const shadow = useTransform(
-        progress,
-        [0, 0.35],
-        [0.45, 0]
-    );
+export default function Curtains() {
 
     return (
         <>
-            {/* Puerta izquierda */}
+            {/* Izquierda */}
             <motion.div
-                className="absolute inset-y-0 left-0 z-10 w-1/2 overflow-hidden"
-                style={{ x: leftX }}
-            >
-                <img
-                    src={portada}
-                    alt=""
-                    draggable={false}
-                    className="absolute inset-0 h-full w-[200%] max-w-none object-cover object-left select-none"
-                />
+                className="absolute left-0 top-0 h-full w-1/2 bg-[#3b2a1f] z-30"
+                initial={{ x: 0 }}
+                animate={{ x: "-100%" }}
+                transition={{
+                    duration: 1.4,
+                    ease: [0.76, 0, 0.24, 1],
+                    delay: 0.2,
+                }}
+            />
 
-                <motion.div
-                    className="absolute inset-0 bg-black"
-                    style={{ opacity: shadow }}
-                />
-            </motion.div>
-
-            {/* Puerta derecha */}
+            {/* Derecha */}
             <motion.div
-                className="absolute inset-y-0 right-0 z-10 w-1/2 overflow-hidden"
-                style={{ x: rightX }}
-            >
-                <img
-                    src={portada}
-                    alt=""
-                    draggable={false}
-                    className="absolute right-0 top-0 h-full w-[200%] max-w-none object-cover object-right select-none"
-                />
-
-                <motion.div
-                    className="absolute inset-0 bg-black"
-                    style={{ opacity: shadow }}
-                />
-            </motion.div>
+                className="absolute right-0 top-0 h-full w-1/2 bg-[#3b2a1f] z-30"
+                initial={{ x: 0 }}
+                animate={{ x: "100%" }}
+                transition={{
+                    duration: 1.4,
+                    ease: [0.76, 0, 0.24, 1],
+                    delay: 0.2,
+                }}
+            />
         </>
     );
+
 }

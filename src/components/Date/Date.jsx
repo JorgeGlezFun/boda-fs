@@ -1,78 +1,47 @@
-import { motion, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
-export default function Date({ progress }) {
-
-    // Aparición del bloque completo
-    const opacity = useTransform(
-        progress,
-        [0.00, 0.15, 0.80, 1],
-        [0, 1, 1, 0]
-    );
-
-    const scale = useTransform(
-        progress,
-        [0.00, 0.20],
-        [0.95, 1]
-    );
-
-    const y = useTransform(
-        progress,
-        [0.00, 0.15, 0.80, 1],
-        [40, 0, 0, -30]
-    );
-
-    // Aparición de cada elemento
-    const dayOpacity = useTransform(
-        progress,
-        [0.10, 0.25],
-        [0, 1]
-    );
-
-    const monthOpacity = useTransform(
-        progress,
-        [0.25, 0.40],
-        [0, 1]
-    );
-
-    const yearOpacity = useTransform(
-        progress,
-        [0.40, 0.55],
-        [0, 1]
-    );
+export default function Date() {
 
     return (
         <motion.section
             className="absolute inset-0 flex items-center justify-center"
-            style={{
-                opacity,
-                scale,
-                y
+            initial={{ opacity: 0, y: 40, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -30, scale: 1.02 }}
+            transition={{
+                duration: 0.9,
+                ease: "easeInOut",
             }}
         >
             <div className="flex flex-col items-center text-white">
 
+                {/* DÍA */}
                 <motion.h2
-                    style={{ opacity: dayOpacity }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0.2 }}
                     className="text-8xl font-cinzel"
                 >
                     24
                 </motion.h2>
 
+                {/* MES */}
                 <motion.div
-                    style={{ opacity: monthOpacity }}
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0.7 }}
                     className="my-6 flex items-center gap-6"
                 >
-                    
-
-                    <p className="tracking-[0.5rem] uppercase text-8xl font-cinzel-decorative">
+                    <p className="text-8xl font-cinzel-decorative tracking-[0.5rem]">
                         04
                     </p>
-
-                    
                 </motion.div>
 
+                {/* AÑO */}
                 <motion.h3
-                    style={{ opacity: yearOpacity }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 1.2 }}
                     className="text-8xl font-cinzel"
                 >
                     27
@@ -81,5 +50,4 @@ export default function Date({ progress }) {
             </div>
         </motion.section>
     );
-
 }
