@@ -26,7 +26,7 @@ export default function Curtains({ progress }) {
         <>
             {/* Puerta izquierda */}
             <motion.div
-                className="absolute inset-y-0 left-0 z-20 w-1/2 overflow-hidden"
+                className="absolute inset-y-0 left-0 z-10 w-1/2 overflow-hidden"
                 style={{ x: leftX }}
             >
                 <img
@@ -44,7 +44,7 @@ export default function Curtains({ progress }) {
 
             {/* Puerta derecha */}
             <motion.div
-                className="absolute inset-y-0 right-0 z-20 w-1/2 overflow-hidden"
+                className="absolute inset-y-0 right-0 z-10 w-1/2 overflow-hidden"
                 style={{ x: rightX }}
             >
                 <img
