@@ -12,9 +12,10 @@ export default function Curtains({ onOpened }) {
 
     return (
         <section
-            className="absolute inset-0 z-50 cursor-pointer"
-            onClick={handleOpen}
-            onTouchEnd={handleOpen}
+            className={`absolute inset-0 z-50 ${
+                isOpening ? "pointer-events-none" : "cursor-pointer"
+            }`}
+            onPointerUp={handleOpen}
         >
 
             <motion.div

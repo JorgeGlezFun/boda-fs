@@ -10,7 +10,11 @@ import Countdown from "./components/Countdown/Countdown";
 import BackgroundManager from "./components/BackgroundManager";
 
 function App() {
+
     const [scene, setScene] = useState(0);
+
+    // Estado del libro
+    const [bookOpened, setBookOpened] = useState(false);
 
     const totalScenes = 6;
 
@@ -19,16 +23,29 @@ function App() {
     };
 
     const prevScene = () => {
-        setScene((current) => Math.max(current - 1, 0));
+        setScene((current) => {
+            const next = Math.max(current - 1, 0);
+
+            // Si volvemos a la escena inicial, cerrar el libro
+            if (next === 0) {
+                setBookOpened(false);
+            }
+
+            return next;
+        });
     };
 
-   const [pointerStartY, setPointerStartY] = useState(null);
+    // -----------------------------
+    // Pointer / Swipe
+    // -----------------------------
+    const [pointerStartY, setPointerStartY] = useState(null);
 
     const handlePointerDown = (e) => {
         setPointerStartY(e.clientY);
     };
 
     const handlePointerUp = (e) => {
+
         if (pointerStartY === null) return;
 
         const deltaY = pointerStartY - e.clientY;
@@ -44,19 +61,29 @@ function App() {
         }
 
         // Tap (movimiento mínimo)
-        else if (Math.abs(deltaY) < 10 && scene !== 0) {
+        else if (
+            Math.abs(deltaY) < 10 &&
+            (scene !== 0 || bookOpened)
+        ) {
             nextScene();
         }
 
         setPointerStartY(null);
-    }; 
+    };
 
-    // Teclado en desktop
+    // -----------------------------
+    // Teclado desktop
+    // -----------------------------
     useEffect(() => {
+
         const handleKeyDown = (e) => {
+
             if (e.key === "ArrowDown" || e.key === " " || e.key === "Enter") {
                 e.preventDefault();
-                nextScene();
+
+                if (scene !== 0 || bookOpened) {
+                    nextScene();
+                }
             }
 
             if (e.key === "ArrowUp") {
@@ -70,20 +97,28 @@ function App() {
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
         };
-    }, []);
+
+    }, [scene, bookOpened]);
 
     return (
-            <main
-                className="fixed inset-0 overflow-hidden bg-black touch-manipulation"
-                onPointerDown={handlePointerDown}
-                onPointerUp={handlePointerUp}
-            >
+
+        <main
+            className="fixed inset-0 overflow-hidden bg-black touch-manipulation"
+            onPointerDown={handlePointerDown}
+            onPointerUp={handlePointerUp}
+        >
+
             <BackgroundManager scene={scene} />
 
+            {/* Escena inicial */}
             {scene === 0 && (
                 <>
                     <SaveTheDate />
-                    <Curtains />
+
+                    <Curtains
+                        isOpened={bookOpened}
+                        onOpened={() => setBookOpened(true)}
+                    />
                 </>
             )}
 
@@ -93,15 +128,18 @@ function App() {
             {scene === 4 && <FinalMessage />}
             {scene === 5 && <Countdown />}
 
+            {/* Botón Atrás */}
             {scene > 0 && (
                 <button
-                    onClick={(e) => {
-                        e.stopPropagation(); // MUY IMPORTANTE
+                    onPointerDown={(e) => e.stopPropagation()}
+                    onPointerUp={(e) => {
+                        e.stopPropagation();
                         prevScene();
                     }}
                     className="pointer-events-auto absolute left-4 top-4 z-50 flex items-center gap-2 rounded-full bg-black/40 px-4 py-2 text-white backdrop-blur-sm transition hover:bg-black/60 active:scale-95"
                     aria-label="Volver a la escena anterior"
                 >
+
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-5 w-5"
@@ -110,18 +148,35 @@ function App() {
                         stroke="currentColor"
                         strokeWidth={2}
                     >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M15 19l-7-7 7-7"
+                        />
                     </svg>
+
                     <span className="text-sm font-medium">Atrás</span>
+
                 </button>
             )}
+
+            {/* Indicadores */}
             <div className="absolute bottom-6 left-1/2 z-50 flex -translate-x-1/2 gap-2">
-                {[0,1,2,3,4,5].map((i) => (
+
+                {[0, 1, 2, 3, 4, 5].map((i) => (
+
                     <button
                         key={i}
-                        onClick={(e) => {
+                        onPointerDown={(e) => e.stopPropagation()}
+                        onPointerUp={(e) => {
                             e.stopPropagation();
+
                             setScene(i);
+
+                            // Si vamos a la escena inicial, cerrar libro
+                            if (i === 0) {
+                                setBookOpened(false);
+                            }
                         }}
                         className={`h-2 rounded-full transition-all ${
                             i === scene
@@ -131,12 +186,11 @@ function App() {
                         aria-label={`Ir a la escena ${i + 1}`}
                     />
                 ))}
+
             </div>
- 
+
         </main>
     );
-
-
-    }
+}
 
 export default App;
