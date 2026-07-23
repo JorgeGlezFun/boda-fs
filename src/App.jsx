@@ -22,30 +22,34 @@ function App() {
         setScene((current) => Math.max(current - 1, 0));
     };
 
-    const [touchStartY, setTouchStartY] = useState(null);
+   const [pointerStartY, setPointerStartY] = useState(null);
 
-    const handleTouchStart = (e) => {
-        setTouchStartY(e.touches[0].clientY);
+    const handlePointerDown = (e) => {
+        setPointerStartY(e.clientY);
     };
 
-    const handleTouchEnd = (e) => {
-        if (touchStartY === null) return;
+    const handlePointerUp = (e) => {
+        if (pointerStartY === null) return;
 
-        const endY = e.changedTouches[0].clientY;
-        const deltaY = touchStartY - endY;
+        const deltaY = pointerStartY - e.clientY;
 
-        // Swipe arriba → siguiente
-        if (deltaY > 60) {
+        // Swipe hacia arriba
+        if (deltaY > 80) {
             nextScene();
         }
 
-        // Swipe abajo → anterior
-        if (deltaY < -60) {
+        // Swipe hacia abajo
+        else if (deltaY < -80) {
             prevScene();
         }
 
-        setTouchStartY(null);
-    };
+        // Tap (movimiento mínimo)
+        else if (Math.abs(deltaY) < 10 && scene !== 0) {
+            nextScene();
+        }
+
+        setPointerStartY(null);
+    }; 
 
     // Teclado en desktop
     useEffect(() => {
@@ -70,10 +74,9 @@ function App() {
 
     return (
             <main
-                className="fixed inset-0 overflow-hidden bg-black"
-                onClick={scene === 0 ? undefined : nextScene}
-                onTouchStart={handleTouchStart}
-                onTouchEnd={handleTouchEnd}
+                className="fixed inset-0 overflow-hidden bg-black touch-manipulation"
+                onPointerDown={handlePointerDown}
+                onPointerUp={handlePointerUp}
             >
             <BackgroundManager scene={scene} />
 
@@ -89,15 +92,6 @@ function App() {
             {scene === 3 && <Location />}
             {scene === 4 && <FinalMessage />}
             {scene === 5 && <Countdown />}
-
-            <button
-                onClick={(e) => {
-                    e.stopPropagation();
-                    nextScene();
-                }}
-                className="absolute inset-0 z-40 cursor-pointer bg-transparent"
-                aria-label="Siguiente escena"
-            />
 
             {scene > 0 && (
                 <button
