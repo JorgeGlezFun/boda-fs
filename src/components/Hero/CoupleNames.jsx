@@ -44,7 +44,7 @@ export default function CoupleNames({ progress }) {
                 style={{
                     opacity: useTransform(
                         progress,
-                        [0.68, 0.78],
+                        [0.55, 0.70],
                         [0, 1]
                     )
                 }}
@@ -56,7 +56,7 @@ export default function CoupleNames({ progress }) {
                 style={{
                     opacity: useTransform(
                         progress,
-                        [0.76, 0.88],
+                        [0.55, 0.70],
                         [0, 1]
                     )
                 }}
@@ -66,7 +66,7 @@ export default function CoupleNames({ progress }) {
             </motion.h2>
             <motion.h2
                 style={{
-                    opacity: useTransform(progress, [0.86, 0.95], [0, 1]),
+                    opacity: useTransform(progress, [0.72, 0.80, 0.86, 0.95], [0, 1, 1, 0]),
                     y: marriedY
                 }}
                 className="mt-6 text-xl font-cinzel"
