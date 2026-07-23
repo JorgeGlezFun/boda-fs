@@ -55,7 +55,7 @@ function App() {
 
     return (
         <>
-            <div className="h-[1500vh]" />
+            <div className="h-[2500vh] xl:h-[1500vh]" />
             <main className="fixed inset-0 overflow-hidden">
 
                 <BackgroundManager

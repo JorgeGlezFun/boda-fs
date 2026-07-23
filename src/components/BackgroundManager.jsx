@@ -27,7 +27,7 @@ export default function BackgroundManager({
                 style={{
                     opacity: useTransform(
                         heroProgress,
-                        [0.00, 0.15, 0.85, 1.00],
+                        [0.00, 0.30, 0.70, 1.00],
                         [1, 1, 1, 0]
                     ),
                     scale: useTransform(heroProgress, [0, 1], [1, 1.035]),
@@ -42,7 +42,7 @@ export default function BackgroundManager({
                 style={{
                     opacity: useTransform(
                         dateProgress,
-                        [0.00, 0.15, 0.85, 1.00],
+                        [0.00, 0.30, 0.70, 1.00],
                         [0, 1, 1, 0]
                     ),
                     scale: useTransform(dateProgress, [0, 1], [1, 1.035]),
@@ -57,7 +57,7 @@ export default function BackgroundManager({
                 style={{
                     opacity: useTransform(
                         locationProgress,
-                        [0.00, 0.15, 0.85, 1.00],
+                        [0.00, 0.30, 0.70, 1.00],
                         [0, 1, 1, 0]
                     ),
                     scale: useTransform(locationProgress, [0, 1], [1, 1.035]),
@@ -72,7 +72,7 @@ export default function BackgroundManager({
                 style={{
                     opacity: useTransform(
                         finalMessageProgress,
-                        [0.00, 0.15, 0.85, 1.00],
+                        [0.00, 0.30, 0.70, 1.00],
                         [0, 1, 1, 0]
                     ),
                     scale: useTransform(finalMessageProgress, [0, 1], [1, 1.035]),
