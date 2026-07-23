@@ -65,32 +65,19 @@ export default function Countdown() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex flex-wrap items-center justify-center gap-6 text-white"
+                className="flex flex-row items-center justify-center gap-6 text-white"
             >
 
                 <div className="flex flex-col items-center font-cinzel min-w-[90px]">
                     <span className="text-5xl md:text-6xl">{timeLeft.days}</span>
-                    <span className="mt-2 text-sm tracking-[0.25rem] uppercase">Días</span>
-                </div>
-
-                <span className="text-4xl md:text-5xl font-cinzel">:</span>
-
-                <div className="flex flex-col items-center font-cinzel min-w-[90px]">
                     <span className="text-5xl md:text-6xl">{timeLeft.hours}</span>
-                    <span className="mt-2 text-sm tracking-[0.25rem] uppercase">Horas</span>
-                </div>
-
-                <span className="text-4xl md:text-5xl font-cinzel">:</span>
-
-                <div className="flex flex-col items-center font-cinzel min-w-[90px]">
                     <span className="text-5xl md:text-6xl">{timeLeft.minutes}</span>
-                    <span className="mt-2 text-sm tracking-[0.25rem] uppercase">Minutos</span>
-                </div>
-
-                <span className="text-4xl md:text-5xl font-cinzel">:</span>
-
-                <div className="flex flex-col items-center font-cinzel min-w-[90px]">
                     <span className="text-5xl md:text-6xl">{timeLeft.seconds}</span>
+                </div>
+                <div className="flex flex-col items-left gap-4 font-cinzel min-w-[90px]">
+                    <span className="mt-2 text-sm tracking-[0.25rem] uppercase">Días</span>
+                    <span className="mt-2 text-sm tracking-[0.25rem] uppercase">Horas</span>
+                    <span className="mt-2 text-sm tracking-[0.25rem] uppercase">Minutos</span>
                     <span className="mt-2 text-sm tracking-[0.25rem] uppercase">Segundos</span>
                 </div>
 

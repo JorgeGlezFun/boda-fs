@@ -13,27 +13,52 @@ export default function FinalMessage() {
                 ease: "easeInOut",
             }}
         >
-            <div className="max-w-3xl text-center text-white">
+            <div className="max-w-4xl text-center text-white">
 
-                <motion.h2
+                {/* Línea 1 */}
+                <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-4xl md:text-5xl font-cinzel mb-6"
+                    className="text-3xl md:text-5xl font-cinzel"
                 >
-                    Estamos deseando compartir este día contigo
-                </motion.h2>
-
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
-                    className="text-lg md:text-xl leading-relaxed font-cinzel"
-                >
-                    Tu presencia hará que este momento sea aún más especial.
+                    Hay momentos que
                 </motion.p>
+
+                {/* Línea 2 */}
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.7 }}
+                    className="text-3xl md:text-5xl font-cinzel"
+                >
+                    merecen ser eternos, y
+                </motion.p>
+
+                {/* Línea 3 */}
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 1.2 }}
+                    className="text-3xl md:text-5xl font-cinzel"
+                >
+                    este queremos compartirlo contigo.
+                </motion.p>
+
+                {/* Firma */}
+                <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.9, delay: 2.0 }}
+                    className="mt-14 flex flex-col items-center"
+                >
+                    <p className="text-2xl md:text-7xl font-pinyon text-white">
+                        Laura y Yeray
+                    </p>
+                </motion.div>
 
             </div>
         </motion.section>
     );
+
 }
