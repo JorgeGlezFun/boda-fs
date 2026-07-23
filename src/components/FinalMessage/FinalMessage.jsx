@@ -54,7 +54,7 @@ export default function FinalMessage({ progress }) {
 
     return (
         <motion.section
-            className="absolute inset-0 flex items-center justify-center px-8"
+            className="absolute inset-0 flex items-center justify-center"
             style={{
                 opacity,
                 y,
@@ -65,35 +65,35 @@ export default function FinalMessage({ progress }) {
 
                 <motion.p
                     style={{ opacity: line1Opacity }}
-                    className="text-4xl leading-relaxed font-cinzel"
+                    className="text-2xl font-cinzel"
                 >
                     Hay momentos que
                 </motion.p>
 
                 <motion.p
                     style={{ opacity: line2Opacity }}
-                    className="mt-4 text-4xl leading-relaxed font-cinzel"
+                    className="text-2xl font-cinzel"
                 >
-                    Merecen ser eternos. Y
+                    Merecen ser eternos, Y
                 </motion.p>
 
                 <motion.p
                     style={{ opacity: line3Opacity }}
-                    className="mt-4 text-4xl leading-relaxed font-cinzel"
+                    className="text-2xl font-cinzel"
                 >
                     Este queremos
                 </motion.p>
 
                 <motion.p
                     style={{ opacity: line4Opacity }}
-                    className="mt-4 text-4xl leading-relaxed font-cinzel"
+                    className="text-2xl font-cinzel"
                 >
                     Compartirlo contigo.
                 </motion.p>
 
                 <motion.p
                     style={{ opacity: line5Opacity }}
-                    className="mt-4 text-3xl leading-relaxed font-pinyon"
+                    className="text-xl leading-24 font-pinyon"
                 >
                     Laura y Yeray
                 </motion.p>
@@ -102,3 +102,5 @@ export default function FinalMessage({ progress }) {
         </motion.section>
     );
 }
+
+// HAY QUE CAMBIAR EL TEXTO DE AQUI YA QUE EN MOVIL SE VE BASTANTE MAL
