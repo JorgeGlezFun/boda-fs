@@ -5,11 +5,18 @@ export default function Date() {
     return (
         <motion.section
             className="absolute inset-0 flex items-center justify-center"
-            initial={{ opacity: 0, y: 40, scale: 0.96 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -30, scale: 1.02 }}
+            initial={{
+                opacity: 0,
+                y: 40,
+                scale: 0.96,
+            }}
+            animate={{
+                opacity: 1,
+                y: 0,
+                scale: 1,
+            }}
             transition={{
-                duration: 0.9,
+                duration: 1.5,
                 ease: "easeInOut",
             }}
         >
@@ -17,9 +24,19 @@ export default function Date() {
 
                 {/* DÍA */}
                 <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.2 }}
+                    initial={{
+                        opacity: 0,
+                        y: 30,
+                    }}
+                    animate={{
+                        opacity: 1,
+                        y: 0,
+                    }}
+                    transition={{
+                        duration: 1.2,
+                        delay: 0.3,
+                        ease: "easeOut",
+                    }}
                     className="text-8xl font-cinzel"
                 >
                     24
@@ -27,9 +44,19 @@ export default function Date() {
 
                 {/* MES */}
                 <motion.div
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.7 }}
+                    initial={{
+                        opacity: 0,
+                        y: 30,
+                    }}
+                    animate={{
+                        opacity: 1,
+                        y: 0,
+                    }}
+                    transition={{
+                        duration: 1.2,
+                        delay: 0.9,
+                        ease: "easeOut",
+                    }}
                     className="my-6 flex items-center gap-6"
                 >
                     <p className="text-8xl font-cinzel-decorative tracking-[0.5rem]">
@@ -39,9 +66,19 @@ export default function Date() {
 
                 {/* AÑO */}
                 <motion.h3
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 1.2 }}
+                    initial={{
+                        opacity: 0,
+                        y: 30,
+                    }}
+                    animate={{
+                        opacity: 1,
+                        y: 0,
+                    }}
+                    transition={{
+                        duration: 1.2,
+                        delay: 1.5,
+                        ease: "easeOut",
+                    }}
                     className="text-8xl font-cinzel"
                 >
                     27

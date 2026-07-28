@@ -1,64 +1,98 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 import portada from "../../assets/fondo.jpg";
 
-export default function Curtains({ isOpened, onOpened }) {
+export default function Curtains({ onOpened }) {
 
-    const handleDismiss = (e) => {
-        e.stopPropagation();
+    const [isOpening, setIsOpening] = useState(false);
 
-        // Si el panel ya ha desaparecido, no hacemos nada
-        if (isOpened) return;
+    const handleOpen = () => {
 
-        // Inicia el fade-out
-        onOpened?.();
+        // Evita que varios clics reinicien la animación
+        if (isOpening) return;
+
+        setIsOpening(true);
+
     };
 
     return (
+
         <motion.section
-            className={`absolute inset-0 z-50 ${
-                isOpened
-                    ? "pointer-events-none"
-                    : "cursor-pointer pointer-events-auto"
-            }`}
-            initial={false}
-            animate={{
-                opacity: isOpened ? 0 : 1,
+            className="absolute inset-0 z-50 cursor-pointer"
+
+            // Fade-in al cargar Curtains
+            initial={{
+                opacity: 0,
             }}
+
+            // Al pulsar, Curtains desaparece
+            animate={{
+                opacity: isOpening ? 0 : 1,
+            }}
+
             transition={{
-                duration: 1.2,
+                duration: isOpening ? 1.2 : 1.6,
                 ease: "easeInOut",
             }}
-            onPointerUp={handleDismiss}
+
+            onClick={handleOpen}
+
+            // Cuando termina el fade-out,
+            // App cambia a SaveTheDate
+            onAnimationComplete={() => {
+
+                if (isOpening) {
+                    onOpened?.();
+                }
+
+            }}
         >
 
-            {/* Fondo del panel inicial */}
+            {/* Fondo del cuadro */}
             <img
                 src={portada}
                 alt=""
                 className="absolute inset-0 h-full w-full object-cover"
+                style={{
+                    objectPosition: "0% 0%",
+                }}
             />
 
-            {/* Overlay para mejorar la lectura */}
-            <div className="absolute inset-0 bg-black/25" />
+            {/* Oscurecimiento */}
+            <div className="absolute inset-0 bg-black/30" />
 
-            {/* Contenido */}
-            <div className="relative z-10 flex h-full items-center justify-center px-6 text-center text-white">
+            {/* Contenido del panel */}
+            <motion.div
+                className="absolute inset-0 flex items-center justify-center text-white"
 
-                <div>
+                animate={{
+                    opacity: isOpening ? 0 : 1,
+                    scale: isOpening ? 0.96 : 1,
+                }}
 
-                    <p className="mb-4 text-sm font-cinzel uppercase tracking-[0.35rem]">
+                transition={{
+                    duration: 0.7,
+                    ease: "easeInOut",
+                }}
+            >
+
+                <div className="px-6 text-center">
+
+                    <p className="mb-4 text-3xl font-cinzel uppercase tracking-[0.35rem]">
                         Laura & Yeray
                     </p>
 
                     <p className="text-2xl font-pinyon">
-                        Toca para descubrir nuestra historia
+                        Toca para comenzar
                     </p>
 
                 </div>
 
-            </div>
+            </motion.div>
 
         </motion.section>
+
     );
+
 }
