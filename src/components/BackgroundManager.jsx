@@ -62,7 +62,7 @@ return (
             />
         </AnimatePresence>
 
-        <div className="pointer-events-none absolute inset-0 bg-black/15" />
+        <div className="pointer-events-none absolute inset-0 bg-black/30" />
     </div>
 );
 
