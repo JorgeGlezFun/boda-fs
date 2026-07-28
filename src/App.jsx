@@ -8,6 +8,7 @@ import Location from "./components/Location/Location";
 import FinalMessage from "./components/FinalMessage/FinalMessage";
 import Countdown from "./components/Countdown/Countdown";
 import BackgroundManager from "./components/BackgroundManager";
+import SoundButton from "./components/SoundButton/SoundButton";
 
 function App() {
 
@@ -109,6 +110,8 @@ function App() {
         >
 
             <BackgroundManager scene={scene} />
+
+            <SoundButton />
 
             {/* Escena inicial */}
             {scene === 0 && (
