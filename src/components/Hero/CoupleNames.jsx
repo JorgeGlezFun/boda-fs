@@ -40,7 +40,7 @@ export default function CoupleNames() {
                     delay: 1.0,
                     ease: "easeOut",
                 }}
-                className="my-5 text-3xl italic font-pinyon"
+                className="flex items-center justify-center my-5 w-full text-3xl italic font-pinyon"
             >
                 and
             </motion.p>
