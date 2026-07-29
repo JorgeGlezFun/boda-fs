@@ -1,17 +1,62 @@
-# React + Vite
+# 💍 Boda FS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con **React** y **Vite** para una invitación de boda digital e interactiva.
 
-Currently, two official plugins are available:
+El objetivo del proyecto fue crear una experiencia elegante y fluida en la que los invitados pudieran consultar toda la información del evento desde cualquier dispositivo, incorporando animaciones, música y una navegación basada en el desplazamiento.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Sitio web
 
-## React Compiler
+**https://www.bodayeraylaura.com**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+* Pantalla de bienvenida animada.
+* Presentación de los novios.
+* Cuenta atrás hasta el día de la boda.
+* Información del evento.
+* Ubicación de la celebración.
+* Música de fondo con control de reproducción.
+* Animaciones sincronizadas con el desplazamiento.
+* Diseño responsive para móviles y escritorio.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# boda-fs
+## 🛠️ Tecnologías
+
+* React
+* Vite
+* JavaScript
+* HTML5
+* CSS3
+
+## 📂 Estructura del proyecto
+
+```text id="4cjlwm"
+src/
+├── assets/
+├── components/
+│   ├── Hero/
+│   ├── Countdown/
+│   ├── Date/
+│   ├── Location/
+│   ├── FinalMessage/
+│   └── SoundButton/
+├── hooks/
+├── App.jsx
+└── main.jsx
+```
+
+## 🎯 Objetivos del proyecto
+
+Este proyecto fue desarrollado con el propósito de crear una invitación digital personalizada, priorizando:
+
+* Una experiencia de usuario atractiva.
+* Animaciones fluidas.
+* Código organizado mediante componentes reutilizables.
+* Adaptación a dispositivos móviles.
+* Alto rendimiento mediante Vite.
+
+## 👨‍💻 Autor
+
+**Jorge González**
+
+GitHub: https://github.com/JorgeGlezFun
+
