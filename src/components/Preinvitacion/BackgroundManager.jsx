@@ -1,11 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 
 // MISMO ARCHIVO, IMPORTADO COMO CAPAS DISTINTAS
-import heroBg from "../assets/fondo.jpg";
-import dateBg from "../assets/fondo.jpg";
-import locationBg from "../assets/fondo.jpg";
-import finalBg from "../assets/fondo.jpg";
-import countdownBg from "../assets/fondo.jpg";
+import heroBg from "../../assets/fondo.jpg";
+import dateBg from "../../assets/fondo.jpg";
+import locationBg from "../../assets/fondo.jpg";
+import finalBg from "../../assets/fondo.jpg";
+import countdownBg from "../../assets/fondo.jpg";
 
 const backgrounds = [
     // 0 - Curtains

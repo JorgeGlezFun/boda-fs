@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-import portada from "../../assets/fondo.jpg";
+import portada from "../../../assets/fondo.jpg";
 
 export default function Curtains({ onOpened }) {
 

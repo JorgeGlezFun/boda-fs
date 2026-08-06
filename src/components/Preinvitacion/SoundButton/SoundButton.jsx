@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import weddingSong from "../../assets/audio/boda.mp3";
+import weddingSong from "../../../assets/audio/boda.mp3";
 
 export default function SoundButton() {
 

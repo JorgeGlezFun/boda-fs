@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 
-import Curtains from "./components/Hero/Curtains";
-import SaveTheDate from "./components/Hero/SaveTheDate";
-import CoupleNames from "./components/Hero/CoupleNames";
-import Date from "./components/Date/Date";
-import Location from "./components/Location/Location";
-import FinalMessage from "./components/FinalMessage/FinalMessage";
-import Countdown from "./components/Countdown/Countdown";
+import Curtains from "./components/Preinvitacion/Hero/Curtains";
+import SaveTheDate from "./components/Preinvitacion/Hero/SaveTheDate";
+import CoupleNames from "./components/Preinvitacion/Hero/CoupleNames";
+import Date from "./components/Preinvitacion/Date/Date";
+import Location from "./components/Preinvitacion/Location/Location";
+import FinalMessage from "./components/Preinvitacion/FinalMessage/FinalMessage";
+import Countdown from "./components/Preinvitacion/Countdown/Countdown";
 
-import BackgroundManager from "./components/BackgroundManager";
-import SoundButton from "./components/SoundButton/SoundButton";
+import BackgroundManager from "./components/Preinvitacion/BackgroundManager";
+import SoundButton from "./components/Preinvitacion/SoundButton/SoundButton";
 
 function App() {
 
