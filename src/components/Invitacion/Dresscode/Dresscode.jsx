@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function Inicio() {
+export default function Dresscode() {
 
     return (
         <motion.section
@@ -12,9 +12,7 @@ export default function Inicio() {
                 ease: "easeInOut",
             }}
         >
-            <p>Laura</p>
-            <p>y</p>
-            <p>Yeray</p>
+            <p>Dresscode</p>
         </motion.section>
     );
 }
