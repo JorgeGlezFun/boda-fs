@@ -1,5 +1,5 @@
 // import { useEffect, useState } from "react";
-import Header from "./components/Invitacion/Header";
+import Header from "./components/Invitacion/Header/Header";
 import Inicio from "./components/Invitacion/Inicio/Inicio";
 import Fecha from "./components/Invitacion/Fecha/Fecha";
 import Timeline from "./components/Invitacion/Timeline/Timeline";
@@ -12,7 +12,7 @@ function App() {
     
     return (
         <main
-            className="fixed inset-0 overflow-hidde touch-manipulation"
+            className="fixed inset-0"
         >   
             <Header />
             <div>

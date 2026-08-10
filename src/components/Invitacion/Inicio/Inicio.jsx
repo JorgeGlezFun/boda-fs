@@ -4,17 +4,17 @@ export default function Inicio() {
 
     return (
         <motion.section
-            className="inset-0 overflow-hidden"
+            className="min-h-screen"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
-                duration: 0.9,
+                duration: 2,
                 ease: "easeInOut",
             }}
         >
-            <p>Laura</p>
-            <p>y</p>
             <p>Yeray</p>
+            <p>y</p>
+            <p>Laura</p>
         </motion.section>
     );
 }

@@ -4,7 +4,7 @@ export default function Direccion() {
 
     return (
         <motion.section
-            className="inset-0 overflow-hidden"
+            className="inset-0 min-h-screen"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
