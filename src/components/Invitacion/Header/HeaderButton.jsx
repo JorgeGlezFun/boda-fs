@@ -5,7 +5,7 @@ export default function HeaderButton({ enlace, texto }) {
     return (
         <div 
             className="
-                flex flex-col items-center justify-center
+                flex flex-col items-center justify-center bg-blue-200
                 hover:scale-110 transition-transform duration-300
                 "
         >

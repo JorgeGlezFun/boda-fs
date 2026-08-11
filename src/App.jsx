@@ -1,4 +1,5 @@
 // import { useEffect, useState } from "react";
+import fondo from "./assets/fondo_invitacion.png";
 import Header from "./components/Invitacion/Header/Header";
 import Inicio from "./components/Invitacion/Inicio/Inicio";
 import Fecha from "./components/Invitacion/Fecha/Fecha";
@@ -12,7 +13,8 @@ function App() {
     
     return (
         <main
-            className="fixed inset-0"
+            className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
+            style = {{ backgroundImage: `url(${fondo})` }}
         >   
             <Header />
             <div>

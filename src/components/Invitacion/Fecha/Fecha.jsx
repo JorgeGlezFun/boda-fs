@@ -1,20 +1,60 @@
 import { motion } from "framer-motion";
 
 export default function Fecha() {
-
     return (
         <motion.section
-            className="inset-0 min-h-screen"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-                duration: 0.9,
-                ease: "easeInOut",
-            }}
+            id="fecha"
+            className="flex items-center justify-center min-h-screen"
         >
-            <p>29</p>
-            <p>de</p>
-            <p>Abril</p>
+            <motion.div
+                className="
+                    flex flex-row items-center justify-center gap-2
+                    px-6 py-4
+                    rounded-full
+                    bg-[#526B5D]
+                    font-baskervville text-4xl
+                    overflow-hidden
+                    text-white
+                "
+                initial={{ width: 0 }}
+                whileInView={{ width: "fit-content" }}
+                viewport={{ once: true }}
+                transition={{
+                    duration: 1,
+                    ease: [0.22, 1, 0.36, 1],
+                }}
+            >
+                <motion.div
+                    className="flex flex-col items-center justify-center px-2"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.4, duration: 0.4 }}
+                >
+                    <span className="w-full py-[0.05rem] bg-white" />
+                    <p>Abril</p>
+                    <span className="w-full py-[0.05rem] bg-white" />
+                </motion.div>
+
+                <motion.p
+                    className="text-5xl font-libre-baskerville"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.4, duration: 0.4 }}
+                >
+                    24
+                </motion.p>
+
+                <motion.div
+                    className="flex flex-col items-center justify-center px-2 font-libre-baskerville text-4xl"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.4, duration: 0.4 }}
+                >
+                    <span className="w-full py-[0.05rem] bg-white" />
+                    <p>2027</p>
+                    <span className="w-full py-[0.05rem] bg-white" />
+                </motion.div>
+            </motion.div>
         </motion.section>
     );
 }
