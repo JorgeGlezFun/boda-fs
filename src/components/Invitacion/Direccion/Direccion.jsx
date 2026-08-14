@@ -27,6 +27,7 @@ export default function Direccion() {
 
     return (
         <motion.section
+            id="direccion"
             className="min-h-screen flex flex-row items-center justify-center gap-50"
             initial="hidden"
             whileInView="visible"

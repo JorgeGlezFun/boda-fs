@@ -1,5 +1,5 @@
 // import { useEffect, useState } from "react";
-import fondo from "./assets/fondo_invitacion.png";
+import fondo from "./assets/img/fondos/fondo_invitacion.png";
 import Header from "./components/Invitacion/Header/Header";
 import Inicio from "./components/Invitacion/Inicio/Inicio";
 import Fecha from "./components/Invitacion/Fecha/Fecha";

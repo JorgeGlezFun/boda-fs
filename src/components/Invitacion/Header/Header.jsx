@@ -11,7 +11,7 @@ export default function Header() {
                 <HeaderButton enlace="#alojamiento" texto="Alojamientos" />
                 <HeaderButton enlace="#dresscode" texto="Dresscode" />
                 <HeaderButton enlace="#timeline" texto="Timeline" />
-                <HeaderButton enlace="/" texto="Confirmación" />
+                <HeaderButton enlace="#confirmacion" texto="Confirmación" />
             </div>
         </>
     );
