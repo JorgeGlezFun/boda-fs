@@ -35,8 +35,8 @@ export default function Alojamiento() {
     return (
         <motion.section
             id="alojamiento"
-            className="flex flex-col items-center justify-center min-h-screen 
-            gap-8 font-herr-von-muellerhoff text-4xl"
+            className="flex flex-col items-center justify-center py-10
+            gap-8 font-herr-von-muellerhoff text-4xl bg-[#faf5e9]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -58,11 +58,13 @@ export default function Alojamiento() {
                         target="_blank"
                         rel="noopener noreferrer"
                         >
-                        <img 
-                            src={hostal.imagen} 
-                            alt={hostal.nombre} 
-                            className="w-1/3 h-full rounded-l-xl group-hover:scale-120 transition-all duration-300" 
-                            />
+                        <div className="w-1/3 h-full rounded-l-xl overflow-hidden" >
+                            <img 
+                                src={hostal.imagen} 
+                                alt={hostal.nombre} 
+                                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-300"
+                                />
+                        </div>
                         <div className="flex flex-col justify-start w-full py-2">
                             <p className="uppercase font-semibold">{hostal.nombre}</p>
                             <p className="text-lg">{hostal.direccion}</p>

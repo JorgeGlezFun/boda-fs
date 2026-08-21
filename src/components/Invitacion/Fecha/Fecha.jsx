@@ -4,10 +4,11 @@ export default function Fecha() {
     return (
         <motion.section
             id="fecha"
-            className="flex items-center justify-center min-h-screen"
+            className="flex items-center justify-center h-fit bg-[#faf5e9] py-10"
         >
             <motion.div
                 className="
+                
                     flex flex-row items-center justify-center gap-2
                     px-6 py-4
                     rounded-full
@@ -28,17 +29,19 @@ export default function Fecha() {
                     className="flex flex-col items-center justify-center px-2"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.4 }}
                 >
-                    <span className="w-full py-[0.05rem] bg-white" />
+                    <span className=" w-full py-[0.05rem] bg-white" />
                     <p>Abril</p>
-                    <span className="w-full py-[0.05rem] bg-white" />
+                    <span className=" w-full py-[0.05rem] bg-white" />
                 </motion.div>
 
                 <motion.p
-                    className="text-5xl font-libre-baskerville"
+                    className="text-5xl font-libre-baskerville "
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.4 }}
                 >
                     24
@@ -48,11 +51,12 @@ export default function Fecha() {
                     className="flex flex-col items-center justify-center px-2 font-libre-baskerville text-4xl"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.4 }}
                 >
-                    <span className="w-full py-[0.05rem] bg-white" />
+                    <span className=" w-full py-[0.05rem] bg-white" />
                     <p>2027</p>
-                    <span className="w-full py-[0.05rem] bg-white" />
+                    <span className=" w-full py-[0.05rem] bg-white" />
                 </motion.div>
             </motion.div>
         </motion.section>

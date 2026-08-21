@@ -1,24 +1,24 @@
 // import { useEffect, useState } from "react";
-import fondo from "./assets/img/fondos/fondo_invitacion.png";
-import Header from "./components/Invitacion/Header/Header";
+//import fondo from "./assets/img/fondos/fondo_invitacion.png";
+// import fondo from "./assets/img/fondos/fondo_movil.png";
+// import Header from "./components/Invitacion/Header/Header";
 import Inicio from "./components/Invitacion/Inicio/Inicio";
 import Fecha from "./components/Invitacion/Fecha/Fecha";
-import Timeline from "./components/Invitacion/Timeline/Timeline";
+import Poesia from "./components/Invitacion/Poesia/Poesia";
 import Direccion from "./components/Invitacion/Direccion/Direccion";
+import Timeline from "./components/Invitacion/Timeline/Timeline";
 import Alojamiento from "./components/Invitacion/Alojamiento/Alojamiento";
 import Dresscode from "./components/Invitacion/Dresscode/Dresscode";
 import Confirmacion from "./components/Invitacion/Confirmacion/Confirmacion";
 
+// <Header />
 function App() {
     
     return (
-        <main
-            className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
-            style = {{ backgroundImage: `url(${fondo})` }}
-        >   
-            <Header />
+        <main>   
             <div>
                 <Inicio />
+                <Poesia />
                 <Fecha />
                 <Direccion />
                 <Alojamiento />
