@@ -5,6 +5,7 @@
 import Inicio from "./components/Invitacion/Inicio/Inicio";
 import Fecha from "./components/Invitacion/Fecha/Fecha";
 import Poesia from "./components/Invitacion/Poesia/Poesia";
+import Novios from "./components/Invitacion/Novios/Novios";
 import Direccion from "./components/Invitacion/Direccion/Direccion";
 import Timeline from "./components/Invitacion/Timeline/Timeline";
 import Alojamiento from "./components/Invitacion/Alojamiento/Alojamiento";
@@ -19,6 +20,7 @@ function App() {
             <div>
                 <Inicio />
                 <Poesia />
+                <Novios />
                 <Fecha />
                 <Direccion />
                 <Alojamiento />
