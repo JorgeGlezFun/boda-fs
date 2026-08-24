@@ -16,7 +16,7 @@ import Confirmacion from "./components/Invitacion/Confirmacion/Confirmacion";
 function App() {
     
     return (
-        <main>   
+        <main className="bg-[#FAF5E9]">   
             <div>
                 <Inicio />
                 <Poesia />

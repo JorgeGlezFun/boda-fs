@@ -29,29 +29,33 @@ export default function Direccion() {
     return (
         <motion.section
             id="direccion"
-            className="h-fit flex flex-col items-center justify-center bg-[#526B5D] text-white gap-6 py-12 px-4 sm:px-6 lg:px-8"
+            className="flex items-center justify-center bg-[#FAF5E9]"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.35 }}
             variants={containerVariants}
         >
-            {/* CEREMONIA */}
-            <motion.div className="flex flex-row items-center justify-center gap-4 w-full h-full px-6">
+            <motion.div
+                 className="
+                grid grid-cols-2 grid-row-2 w-160
+                bg-[#FAF5E9] text-black gap-4 py-12 px-4 
+                sm:px-6 lg:px-8"
+            >
+                {/* CEREMONIA */}
                 <motion.div
                     className="
-                        flex flex-col items-center justify-center w-1/2 
-                        font-baskervville text-center
-                        gap-3
+                        flex flex-col justify-center
+                        font-baskervville
+                        gap-2
                         "
                     variants={itemVariants}
                 >
-                    <motion.h1
+                    <motion.p
                         className="text-4xl"
                         variants={itemVariants}
                     >
                         Ceremonia
-                    </motion.h1>
-
+                    </motion.p>
                     <motion.p variants={itemVariants} className="font-herr-von-muellerhoff text-3xl">
                         Parroquia Santa María de Jesús
                     </motion.p>
@@ -60,84 +64,46 @@ export default function Direccion() {
                     </motion.p>
                 </motion.div>
                 <motion.div
-                    className="h-full w-1/2 overflow-hidden rounded-4xl"
-                >
-                    <motion.img 
-                        src={parroquia} alt="Parroquía de Santa María de Jesús" 
-                        className="h-full object-cover"
-                    />
-                </motion.div>
-            </motion.div>
-
-            {/* SEPARADOR */}
-            <motion.div
-                className=" flex flex-row items-center gap-2"
-            >
-                <motion.div
-                    className="h-px w-32 bg-white/20 origin-top"
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true, amount: 0.35 }}
-                    transition={{
-                        duration: 1,
-                        delay: 0.35,
-                        ease: "easeInOut",
-                    }}
-                />
-
-                <motion.span
-                    className="my-3 text-sm"
-                    initial={{ opacity: 0, scale: 0.7 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true, amount: 0.35 }}
-                    transition={{
-                        duration: 0.6,
-                        delay: 0.9,
-                        ease: "easeOut",
-                    }}
-                >
-                    ✦
-                </motion.span>
-
-                <motion.div
-                    className="h-px w-32 bg-white/20 origin-top"
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true, amount: 0.35 }}
-                    transition={{
-                        duration: 1,
-                        delay: 0.35,
-                        ease: "easeInOut",
-                    }}
-                />
-            </motion.div>
-
-            {/* CONVITE */}
-            <motion.div className="flex flex-row items-center justify-center gap-4 w-full h-full px-6">
-                <motion.div
-                    className="h-full w-1/2 overflow-hidden rounded-4xl"
+                    className="flex items-center justify-center h-96 rounded-xl border-[#FAF5E9] overflow-hidden"
                     varians={itemVariants}
                 >
                     <motion.img 
-                        src={salon} alt="Parroquía de Santa María de Jesús" 
-                        className="h-1/2 object-cover"
+                        src={parroquia} alt="Salón las Adelfas" 
+                        className="
+                        h-full
+                        bg-cover bg-center bg-no-repeat
+                        [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]
+                        "
+                    />
+                </motion.div>
+                {/* CONVITE */}
+                <motion.div
+                    className="flex items-center justify-center h-96 rounded-xl border-[#FAF5E9] overflow-hidden"
+                    varians={itemVariants}
+                >
+                    <motion.img 
+                        src={salon} alt="Salón las Adelfas" 
+                        className="
+                        h-full
+                        bg-cover bg-center bg-no-repeat
+                        [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]
+                        "
                     />
                 </motion.div>
                 <motion.div
                     className="
-                        flex flex-col items-center justify-center w-1/2 
-                        font-baskervville text-center
-                        gap-3
+                        flex flex-col justify-center
+                        font-baskervville text-right
+                        gap-2
                         "
                     variants={itemVariants}
                 >
-                    <motion.h1
+                    <motion.p
                         className="text-4xl"
                         variants={itemVariants}
                     >
                         Celebración
-                    </motion.h1>
-
+                    </motion.p>
                     <motion.p variants={itemVariants} className="font-herr-von-muellerhoff text-3xl">
                         Salón las Adelfas
                     </motion.p>
