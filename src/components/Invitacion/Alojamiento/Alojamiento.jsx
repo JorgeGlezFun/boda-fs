@@ -45,20 +45,21 @@ export default function Alojamiento() {
             }}
         >
             <p>Alojamiento</p>
-            <div className="grid grid-cols-2 grid-rows-2 grid-flow-col place-items-center gap-6 mx-4">
+            <div className="grid grid-cols-1 grid-rows-4 grid-flow-col place-items-center gap-6">
                 {Object.values(hostales).map((hostal) => (
                     <a className="
                         group
                         flex flex-row gap-4
-                        font-baskervville text-xl
-                        rounded-xl bg-black/10 w-full h-32 overflow-hidden
-                        hover:bg-black/20 hover:-translate-y-4 transition-all duration-300
+                        font-baskervville text-xl text-white
+                        rounded-xl bg-[#6a837f] w-full h-32 overflow-hidden
+                        hover:bg-[#6a837f]/70 hover:-translate-y-4 transition-all duration-300
+                        active:bg-[#6a837f]/70 active:-translate-y-4
                         "
                         href={hostal.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         >
-                        <div className="w-1/3 h-full rounded-l-xl overflow-hidden" >
+                        <div className="w-1/2 h-full rounded-l-xl overflow-hidden" >
                             <img 
                                 src={hostal.imagen} 
                                 alt={hostal.nombre} 

@@ -46,7 +46,7 @@ export default function Direccion() {
                     className="
                         flex flex-col justify-center
                         font-baskervville
-                        gap-2
+                        gap-2 text-center
                         "
                     variants={itemVariants}
                 >
@@ -93,7 +93,7 @@ export default function Direccion() {
                 <motion.div
                     className="
                         flex flex-col justify-center
-                        font-baskervville text-right
+                        font-baskervville text-center
                         gap-2
                         "
                     variants={itemVariants}
