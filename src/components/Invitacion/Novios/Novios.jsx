@@ -4,7 +4,7 @@ import abrazo from "../../../assets/img/fotos/abrazo.png";
 import margarita_izq from "../../../assets/img/fondos/margarita_izq.png";
 import margarita_der from "../../../assets/img/fondos/margarita_der.png";
 
-export default function Poesia() {
+export default function Novios() {
     return (
         <motion.section
             id="direccion"

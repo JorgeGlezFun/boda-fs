@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import fondo from "../../../assets/img/fondos/fondo_movil.png";
+import fondo from "../../../assets/img/fondos/inicio/fondo_movil.png";
 export default function Inicio() {
 
     return (
