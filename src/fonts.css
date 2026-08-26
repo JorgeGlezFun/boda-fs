@@ -9,4 +9,6 @@
     --font-baskervville: "Baskervville", serif;
     --font-herr-von-muellerhoff: "Herr Von Muellerhoff", cursive;
     --font-libre-baskerville: "Libre Baskerville", serif;
+    --breakpoint-3xl: 120rem;
+    --breakpoint-4xl: 160rem;
 }

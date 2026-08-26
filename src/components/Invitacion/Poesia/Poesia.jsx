@@ -5,22 +5,27 @@ import pedida from "../../../assets/img/fotos/pedida.png";
 import abrazo from "../../../assets/img/fotos/abrazo.png";
 export default function Poesia() {
     return (
-        <motion.section>
+        <motion.section
+            className="flex flex-col items-center justify-center bg-[#faf5e9] min-h-screen"
+        >
             <motion.div
                 className="
                 grid grid-cols-3 grid-rows-[auto_auto]
                 items-center justify-center
-                w-160
+                w-160 md:w-3xl lg:w-5xl xl:w-7xl 2xl:w-[96rem] 3xl:w-[120rem]
                 text-black font-baskervville
-                bg-cover bg-center bg-no-repeat min-h-screen
+                bg-cover bg-center bg-no-repeat
                 "
                 style = {{ backgroundImage: `url(${fondo})` }}
             >  
                 <motion.div
                     className="
-                    relative
-                    transform translate-x-10
-                    col-start-1 row-start-1 flex flex-col items-center justify-center gap-2 p-2
+                    relative w-fit
+                    left-10 xl:left-15 2xl:left-40 3xl:left-75
+                    top-5
+                    col-start-1 row-start-1 flex flex-col items-center justify-center 
+                    px-2 xl:px-4
+                    pt-2 xl:pt-4
                     bg-[#F5F4EF] rotate-2 shadow-xl"
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -35,12 +40,12 @@ export default function Poesia() {
                         alt="Pedida de mano"
                         className="w-full xl:w-96 object-cover"
                         />
-                    <p className="py-2 italic">"Si, quiero"</p>
+                    <p className="py-4 italic">"Si, quiero"</p>
                 </motion.div>
                 <div className="
-                    relative top-40
+                    relative 
+                    top-40 md:top-48 lg:top-60 xl:top-72 2xl:top-66 3xl:top-60
                     flex items-center justify-center rounded-full mx-6
-                    bg-[#F5F4EF]/25
                     ">
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -48,8 +53,10 @@ export default function Poesia() {
                         viewport={{ once: true, amount: 0.35 }}
                         transition={{ duration: 1 }}
                         className="
-                        w-40 h-fit px-6 py-4
-                        text-center font-baskervville text-[12px] italic
+                        h-fit px-6 py-4
+                        w-40 md:w-44 lg:w-62 xl:w-88 2xl:w-96 3xl:w-96
+                        text-[12px] md:text-sm lg:text-lg xl:text-xl 2xl:text-3xl 3xl:text-4xl
+                        text-center font-baskervville italic
                         "
                         >
                         "En un mundo lleno de gente que corre, <br/>
@@ -64,8 +71,13 @@ export default function Poesia() {
                 </div>
                 <motion.div 
                     className="
-                    col-start-3 row-start-2 flex flex-col items-center justify-center gap-2 p-2
-                    bg-[#F5F4EF] -rotate-2 shadow-xl transform -translate-x-10"
+                    relative 
+                    right-10 xl:right-15
+                    bottom-5 w-fit
+                    col-start-3 row-start-2 flex flex-col items-center justify-center 
+                    px-2 xl:px-4
+                    pt-2 xl:pt-4
+                    bg-[#F5F4EF] -rotate-2 shadow-xl"
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -80,7 +92,7 @@ export default function Poesia() {
                         alt="Abrazo de los novios"
                         className="w-full xl:w-96 object-cover"
                         />
-                    <p className="py-2 italic">"¡Nos casamos!"</p>
+                    <p className="py-4 italic">"¡Nos casamos!"</p>
                 </motion.div>
             </motion.div>
         </motion.section>
