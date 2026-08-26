@@ -65,7 +65,7 @@ export default function Direccion() {
                 </motion.div>
                 <motion.div
                     className="flex items-center justify-center h-96 rounded-xl border-[#FAF5E9] overflow-hidden"
-                    varians={itemVariants}
+                    variants={itemVariants}
                 >
                     <motion.img 
                         src={parroquia} alt="Salón las Adelfas" 
@@ -79,7 +79,7 @@ export default function Direccion() {
                 {/* CONVITE */}
                 <motion.div
                     className="flex items-center justify-center h-96 rounded-xl border-[#FAF5E9] overflow-hidden"
-                    varians={itemVariants}
+                    variants={itemVariants}
                 >
                     <motion.img 
                         src={salon} alt="Salón las Adelfas" 
