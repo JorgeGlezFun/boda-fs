@@ -4,7 +4,7 @@ export default function Confirmacion() {
 
     return (
         <motion.section
-            className="flex flex-col items-center justify-center h-fit bg-[#faf5e9] py-10 text-4xl font-herr-von-muellerhoff text-black"
+            className="flex flex-col items-center justify-center h-fit py-10 text-4xl font-herr-von-muellerhoff text-black"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{

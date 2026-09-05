@@ -4,7 +4,7 @@ export default function Fecha() {
     return (
         <motion.section
             id="fecha"
-            className="flex items-center justify-center h-fit bg-[#faf5e9] py-10"
+            className="flex items-center justify-center h-fit py-10"
         >
             <motion.div
                 className="

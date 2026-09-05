@@ -36,7 +36,7 @@ export default function Alojamiento() {
         <motion.section
             id="alojamiento"
             className="flex flex-col items-center justify-center py-10
-            gap-8 font-herr-von-muellerhoff text-4xl bg-[#faf5e9]"
+            gap-8 font-herr-von-muellerhoff text-4xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{

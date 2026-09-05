@@ -6,7 +6,7 @@ import abrazo from "../../../assets/img/fotos/abrazo.png";
 export default function Poesia() {
     return (
         <motion.section
-            className="flex flex-col items-center justify-center bg-[#faf5e9] min-h-screen"
+            className="flex flex-col items-center justify-center min-h-screen"
         >
             <motion.div
                 className="

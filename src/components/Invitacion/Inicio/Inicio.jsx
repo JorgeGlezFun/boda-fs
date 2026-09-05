@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import fondo from "../../../assets/img/fondos/inicio/fondo_movil.png";
+import fondo from "../../../assets/img/fondos/inicio/fondo_inicio.jpg";
 export default function Inicio() {
 
     return (
@@ -12,7 +12,7 @@ export default function Inicio() {
                 style = {{ backgroundImage: `url(${fondo})` }}
                 >
             <motion.div
-                className="flex flex-col items-center justify-center gap-2"
+                className="flex flex-col items-center justify-center gap-2 w-fit"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{

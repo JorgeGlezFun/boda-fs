@@ -29,7 +29,7 @@ export default function Direccion() {
     return (
         <motion.section
             id="direccion"
-            className="flex items-center justify-center bg-[#FAF5E9]"
+            className="flex items-center justify-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.35 }}
@@ -38,7 +38,7 @@ export default function Direccion() {
             <motion.div
                  className="
                 grid grid-cols-2 grid-row-2 w-160
-                bg-[#FAF5E9] text-black gap-4 py-12 px-4 
+                text-black gap-4 py-12 px-4 
                 sm:px-6 lg:px-8"
             >
                 {/* CEREMONIA */}
