@@ -40,7 +40,7 @@ export default function Poesia() {
                         alt="Pedida de mano"
                         className="w-full xl:w-96 object-cover"
                         />
-                    <p className="py-4 italic">"Si, quiero"</p>
+                    <p className="py-4 italic lg:text-base xl:text-xl 2xl:text-2xl">"Si, quiero"</p>
                 </motion.div>
                 <div className="
                     relative 
@@ -92,7 +92,7 @@ export default function Poesia() {
                         alt="Abrazo de los novios"
                         className="w-full xl:w-96 object-cover"
                         />
-                    <p className="py-4 italic">"¡Nos casamos!"</p>
+                    <p className="py-4 italic lg:text-base xl:text-xl 2xl:text-2xl">"¡Nos casamos!"</p>
                 </motion.div>
             </motion.div>
         </motion.section>

@@ -1,33 +1,33 @@
 import { motion } from "framer-motion";
-import barrio_nuevo from "../../../assets/img/alojamientos/barrio_nuevo.jpg";
-import lb from "../../../assets/img/alojamientos/lb.jpeg";
-import mellizo from "../../../assets/img/alojamientos/mellizo.jpg";
-import fleming from "../../../assets/img/alojamientos/fleming.jpg";
+
+
 
 const hostales = {
     hotel_1: {
         nombre: "Hotel Barrio Nuevo",
         direccion: "C. Céspedes, 3, 41740 Lebrija, Sevilla",
         link: "https://www.hotelbarrionuevo.es/",
-        imagen: barrio_nuevo,
     },
     hotel_2: {
         nombre: "LB Lebrija Hotel & Terraza",
         direccion: "Av. Juan Peña el Lebrijano, 10, 41740 Lebrija, Sevilla",
         link: "https://www.lblebrijahotel.com/",
-        imagen: lb,
     },
     hotel_3: {
         nombre: "Hostal Mellizo",
         direccion: "C. Tetuán, 40, 41740 Lebrija, Sevilla",
         link: "https://www.hostalmellizo.com/",
-        imagen: mellizo,
     },
     hotel_4: {
         nombre: "Hostal Fleming",
         direccion: "Av. del Dr. Fleming, 10, 41740 Lebrija, Sevilla",
         link: "https://es.hoteles.com/ho2960173504/hostal-fleming-lebrija-espana/?chkin=2027-04-24&chkout=2027-04-25&x_pwa=1&rfrr=HSR&pwa_ts=1786674225764&referrerUrl=aHR0cHM6Ly9lcy5ob3RlbGVzLmNvbS9Ib3RlbC1TZWFyY2g%3D&rffrid=sem.hcom.ES.156.003.mapresults.02.desktop-1.kwrd%3DGGMETA.92474172ESes-20270424-N-ABW%3D253-camp%3D20258787808-aud%3D-N&useRewards=false&rm1=a2&regionId=6344204&destination=Lebrija%2C+Andaluc%C3%ADa%2C+Espa%C3%B1a&destType=MARKET&selected=92474172&latLong=36.919788%2C-6.075862&mpo=EC&sort=RECOMMENDED&top_dp=70&top_cur=EUR&gclid=CjwKCAjw1vXTBhB-EiwAEKr_k1kn8NU_I66C7DC_Ilr_M1aPyiJjQm9lP3z74TmhRgOiZtGDgJvcrxoCyVUQAvD_BwE&mctc=10&userIntent=&selectedRoomType=321958295&selectedRatePlan=389918122&expediaPropertyId=92474172&searchId=27936ed2-b2c4-4b7c-a783-20e0a72cd4fb",
-        imagen: fleming,
+    },
+
+    hotel_5: {
+        nombre: "Ver mas hoteles",
+        direccion: "︾",
+        link: "https://www.booking.com/searchresults.es.html?aid=2440491&label=cht532js-10CAsoRkIOZ2FsbGVnb3MtaG91c2VIClgDaEaIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Ap_77dMGwAIB0gIkNmRmMGI0ZDAtNGRmOS00ZmUzLTg2NDItMTdmNWQ5MWMxYWYz2AIB4AIB&sid=7d8e80d3c77a90a4c177f309092fc9f2&dest_id=-388959&dest_type=city&srpvid=20ab8bd0a5f200f1&chal_t=1788905568817&force_referer=",
     },
 }
 export default function Alojamiento() {
@@ -36,7 +36,7 @@ export default function Alojamiento() {
         <motion.section
             id="alojamiento"
             className="flex flex-col items-center justify-center py-10
-            gap-8 font-herr-von-muellerhoff text-4xl"
+            gap-8 font-herr-von-muellerhoff"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -44,31 +44,25 @@ export default function Alojamiento() {
                 ease: "easeInOut",
             }}
         >
-            <p>Alojamiento</p>
-            <div className="grid grid-cols-1 grid-rows-4 grid-flow-col place-items-center gap-6">
+            <p className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl">Alojamiento</p>
+            <div className="grid grid-cols-1 grid-rows-5 grid-flow-col place-items-center gap-6">
                 {Object.values(hostales).map((hostal) => (
                     <a className="
                         group
-                        flex flex-row gap-4
-                        font-baskervville text-xl text-white
-                        rounded-xl bg-[#6a837f] w-full h-32 overflow-hidden
-                        hover:bg-[#6a837f]/70 hover:-translate-y-4 transition-all duration-300
-                        active:bg-[#6a837f]/70 active:-translate-y-4
+                        flex flex-row gap-4 w-full h-32 px-28
+                        font-baskervville text-xl text-[#526B5D]
+                        rounded-xl bg-[#F5F4EF] overflow-hidden
+                        border-2 border-[#526B5D]
+                        hover:bg-[#526B5D] hover:-translate-y-3 hover:text-[#F5F4EF] transition-all duration-500
+                        active:bg-[#526B5D] active:translate-y-0 active:outline-4 active:outline-[#526B5D] active:outline-offset-4 active:text-[#F5F4EF]
                         "
                         href={hostal.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         >
-                        <div className="w-1/2 h-full rounded-l-xl overflow-hidden" >
-                            <img 
-                                src={hostal.imagen} 
-                                alt={hostal.nombre} 
-                                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-300"
-                                />
-                        </div>
-                        <div className="flex flex-col justify-start w-full py-2">
-                            <p className="uppercase font-semibold">{hostal.nombre}</p>
-                            <p className="text-lg">{hostal.direccion}</p>
+                        <div className="flex flex-col justify-center items-center w-full h-full gap-2">
+                            <p className="font-light xl:text-2xl 2xl:text-3xl 3xl:text-4xl">{hostal.nombre}</p>
+                            <p className="text-sm xl:text-lg 2xl:text-xl 3xl:text-2xl">{hostal.direccion}</p>
                         </div>
                     </a>
                 ))}

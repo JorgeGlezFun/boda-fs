@@ -47,7 +47,7 @@ export default function Dresscode() {
                         mx-8 md:mx-10 lg:mx-0
                         mb-10 md:mb-8 lg:mb-16 xl:mb-18 2xl:mb-22 3xl:mb-28
                         lg:leading-relaxed
-                        bg-black/50
+                        bg-[#F5F4EF]/75
                         "
                     >
                         Queremos que vengáis como más cómodos y vosotros mismos os sintáis. 
