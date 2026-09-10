@@ -64,7 +64,7 @@ export default function Direccion() {
                     </motion.p>
                 </motion.div>
                 <motion.div
-                    className="flex items-center justify-center h-96 rounded-xl border-[#FAF5E9] overflow-hidden"
+                    className="flex items-center justify-center h-96 rounded-xl border-[#F3EFE4] overflow-hidden"
                     variants={itemVariants}
                 >
                     <motion.img 
@@ -78,7 +78,7 @@ export default function Direccion() {
                 </motion.div>
                 {/* CONVITE */}
                 <motion.div
-                    className="flex items-center justify-center h-96 rounded-xl border-[#FAF5E9] overflow-hidden"
+                    className="flex items-center justify-center h-96 rounded-xl border-[#F3EFE4] overflow-hidden"
                     variants={itemVariants}
                 >
                     <motion.img 

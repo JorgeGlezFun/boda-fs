@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 
-
-
 const hostales = {
     hotel_1: {
         nombre: "Hotel Barrio Nuevo",
