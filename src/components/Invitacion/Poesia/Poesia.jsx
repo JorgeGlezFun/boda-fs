@@ -20,7 +20,7 @@ export default function Poesia() {
             >  
                 <motion.div
                     className="
-                    relative w-fit
+                    relative w-fit z-10
                     left-10 xl:left-15 2xl:left-40 3xl:left-75
                     top-5
                     col-start-1 row-start-1 flex flex-col items-center justify-center 
@@ -45,7 +45,7 @@ export default function Poesia() {
                 <div className="
                     relative 
                     top-40 md:top-48 lg:top-60 xl:top-72 2xl:top-66 3xl:top-60
-                    flex items-center justify-center rounded-full mx-6
+                    flex items-center justify-center rounded-full mx-6 backdrop-blur-md
                     ">
                     <motion.p
                         initial={{ opacity: 0 }}
