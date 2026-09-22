@@ -17,9 +17,9 @@ function App() {
                 <Poesia />
                 <Fecha />
                 <Direccion />
-                <Alojamiento />
-                <Dresscode />
                 <Timeline />
+                <Dresscode />
+                <Alojamiento />
                 <Confirmacion />
             </div>
         </main>

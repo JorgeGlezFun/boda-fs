@@ -37,7 +37,8 @@ export default function Direccion() {
         >
             <motion.div
                  className="
-                grid grid-cols-2 grid-row-2 w-160
+                grid grid-cols-2 grid-row-2 
+                w-160 md:w-3xl lg:w-5xl xl:w-7xl 2xl:w-364 3xl:w-[120rem]
                 text-black gap-4 py-12 px-4 
                 sm:px-6 lg:px-8"
             >
@@ -64,7 +65,7 @@ export default function Direccion() {
                     </motion.p>
                 </motion.div>
                 <motion.div
-                    className="flex items-center justify-center h-96 rounded-xl border-[#F3EFE4] overflow-hidden"
+                    className="flex items-center justify-center h-fit rounded-xl border-[#F3EFE4] overflow-hidden"
                     variants={itemVariants}
                 >
                     <motion.img 
@@ -78,7 +79,7 @@ export default function Direccion() {
                 </motion.div>
                 {/* CONVITE */}
                 <motion.div
-                    className="flex items-center justify-center h-96 rounded-xl border-[#F3EFE4] overflow-hidden"
+                    className="flex items-center justify-center h-fit rounded-xl border-[#F3EFE4] overflow-hidden"
                     variants={itemVariants}
                 >
                     <motion.img 

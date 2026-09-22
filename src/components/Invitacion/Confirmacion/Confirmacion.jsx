@@ -6,6 +6,8 @@ import {
     X,
 } from "lucide-react";
 import { useEffect, useState } from "react";
+import fondo from "../../../assets/img/fondos/confirmacion/fondo_confirmacion.png";
+
 
 /*
 =========================================================
@@ -447,7 +449,9 @@ export default function Confirmacion() {
                 text-4xl
                 font-herr-von-muellerhoff
                 text-black
+                bg-cover bg-center bg-no-repeat
             "
+            style = {{ backgroundImage: `url(${fondo})` }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -455,20 +459,19 @@ export default function Confirmacion() {
                 ease: "easeInOut",
             }}
         >
-            <p>Confirmación</p>
+            <p className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl">Confirmación</p>
 
             <div
                 className="
                     flex flex-col items-center justify-center
-                    w-xl md:w-2xl lg:w-5xl xl:w-7xl
-                    2xl:w-[96rem] 3xl:w-[120rem]
+                    w-xl md:w-2xl lg:w-3xl xl:w-5xl 2xl:w-7xl
                     p-10 mt-5
-                    bg-[#F3EFE4]
+                    bg-[#F3EFE4]/80 backdrop-blur-md
                     rounded-3xl
                     border border-[#4b6756]
                     text-[#4b6756]
                     font-baskervville
-                    text-sm
+                    text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl
                 "
             >
                 {!enviado ? (
@@ -477,8 +480,8 @@ export default function Confirmacion() {
                         className="
                             flex
                             flex-col
-                            gap-6
-                            w-full
+                            gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14
+                            w-full                          
                         "
                     >
                         {/* =================================================
@@ -819,8 +822,8 @@ export default function Confirmacion() {
                                                 flex-col
                                                 gap-3
                                                 p-5
-                                                rounded-xl
-                                                border
+                                                
+                                                border-b
                                                 border-[#4b6756]/40
                                             "
                                         >
@@ -958,9 +961,7 @@ export default function Confirmacion() {
                                                     .value
                                             )
                                         }
-                                        placeholder="
-                                            Escribe el título de la canción
-                                        "
+                                        placeholder="Escribe el título de la canción"
                                         className="
                                             border
                                             border-[#4b6756]
@@ -1402,15 +1403,11 @@ export default function Confirmacion() {
                                 id="informacion"
                                 name="informacion"
                                 rows="4"
-                                placeholder="
-                                    Alergias, intolerancias o temas de salud que deba saber el catering
-                                "
+                                placeholder="Alergias, intolerancias o temas de salud que deba saber el catering"
                                 className="
-                                    border
-                                    border-[#4b6756]
+                                    border border-[#4b6756]
                                     rounded-md
-                                    p-3
-                                    w-full
+                                    w-full p-3
                                     bg-transparent
                                     outline-none
                                     resize-none
@@ -1509,3 +1506,9 @@ export default function Confirmacion() {
         </motion.section>
     );
 }
+
+// Meter bordes difusos entre imagenes.
+// Ajustar fondos de los componentes
+// Cambiar orden de componentes
+// Comprobar version de producción
+// Ajustar animaciones que se hayan olvidado de añadir

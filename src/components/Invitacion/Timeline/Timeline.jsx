@@ -8,6 +8,7 @@ import {
     Wine,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import fondo from "../../../assets/img/fondos/timeline/fondo_timeline.png";
 
 const eventIcons = {
     ceremony: Church,
@@ -135,7 +136,12 @@ export default function Timeline() {
 
     return (
         <motion.section
-            className="flex h-fit flex-col items-center justify-center py-10 text-4xl font-herr-von-muellerhoff text-black"
+            className="
+                flex h-fit flex-col items-center justify-center py-10 
+                text-4xl font-herr-von-muellerhoff text-black
+                bg-cover bg-center bg-no-repeat
+                "
+            style={{backgroundImage: `url(${fondo})`}}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
