@@ -14,6 +14,7 @@ export default function Dresscode() {
                 py-10 gap-2
                 text-4xl font-herr-von-muellerhoff text-black
                 bg-cover bg-center bg-no-repeat
+                mb-10 md:mb-12 lg:mb-15 xl:mb-20 2xl:mb-30 3xl:mb-50
                 "
                 style = {{ backgroundImage: `
                     linear-gradient(to top, transparent 90%, #F3EFE4 100%),    

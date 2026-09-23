@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import fondo from "../../../assets/img/fondos/alojamientos/fondo_alojamientos.jpg";
 const hostales = {
     hotel_1: {
         nombre: "Hotel Barrio Nuevo",
@@ -34,7 +34,14 @@ export default function Alojamiento() {
         <motion.section
             id="alojamiento"
             className="flex flex-col items-center justify-center py-10
-            gap-8 font-herr-von-muellerhoff"
+            gap-8 font-herr-von-muellerhoff
+            bg-cover bg-center bg-no-repeat
+            mb-10 md:mb-12 lg:mb-15 xl:mb-20 2xl:mb-30 3xl:mb-50
+            "
+            style = {{ backgroundImage: `
+                linear-gradient(to top, transparent 80%, #F3EFE4 100%),    
+                linear-gradient(to bottom, transparent 90%, #F3EFE4 100%),    
+                url(${fondo})` }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -47,9 +54,11 @@ export default function Alojamiento() {
                 {Object.values(hostales).map((hostal) => (
                     <a className="
                         group
-                        flex flex-row gap-4 w-full h-32 px-28
+                        flex flex-row gap-4 w-full 
+                        h-32 3xl:h-52 
+                        px-28 3xl:px-36
                         font-baskervville text-xl text-[#526B5D]
-                        rounded-xl bg-[#F5F4EF] overflow-hidden
+                        rounded-xl bg-[#F5F4EF]/80 backdrop-blur-md overflow-hidden
                         border-2 border-[#526B5D]
                         hover:bg-[#526B5D] hover:-translate-y-3 hover:text-[#F5F4EF] transition-all duration-500
                         active:bg-[#526B5D] active:translate-y-0 active:outline-4 active:outline-[#526B5D] active:outline-offset-4 active:text-[#F5F4EF]
@@ -59,8 +68,8 @@ export default function Alojamiento() {
                         rel="noopener noreferrer"
                         >
                         <div className="flex flex-col justify-center items-center w-full h-full gap-2">
-                            <p className="font-light xl:text-2xl 2xl:text-3xl 3xl:text-4xl">{hostal.nombre}</p>
-                            <p className="text-sm xl:text-lg 2xl:text-xl 3xl:text-2xl">{hostal.direccion}</p>
+                            <p className="font-light xl:text-3xl 2xl:text-4xl 3xl:text-5xl">{hostal.nombre}</p>
+                            <p className="text-sm xl:text-xl 2xl:text-xl 3xl:text-4xl">{hostal.direccion}</p>
                         </div>
                     </a>
                 ))}

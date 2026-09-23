@@ -6,7 +6,7 @@ import abrazo from "../../../assets/img/fotos/abrazo.png";
 export default function Poesia() {
     return (
         <motion.section
-            className="flex flex-col items-center justify-center min-h-screen"
+            className="flex flex-col items-center justify-center min-h-screen mb-10 md:mb-12 lg:mb-15 xl:mb-20 2xl:mb-30 3xl:mb-50"
         >
             <motion.div
                 className="
@@ -56,7 +56,9 @@ export default function Poesia() {
                         viewport={{ once: true, amount: 0.35 }}
                         transition={{ duration: 1 }}
                         className="
-                        h-fit px-6 py-4
+                        h-fit 
+                        px-6
+                        py-4
                         w-40 md:w-44 lg:w-62 xl:w-88 2xl:w-96 3xl:w-96
                         text-[12px] md:text-sm lg:text-lg xl:text-xl 2xl:text-3xl 3xl:text-4xl
                         text-center font-baskervville italic

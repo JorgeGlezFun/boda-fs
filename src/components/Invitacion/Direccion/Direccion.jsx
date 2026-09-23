@@ -36,11 +36,13 @@ export default function Direccion() {
             variants={containerVariants}
         >
             <motion.div
-                 className="
+                className="
                 grid grid-cols-2 grid-row-2 
                 w-160 md:w-3xl lg:w-5xl xl:w-7xl 2xl:w-364 3xl:w-[120rem]
                 text-black gap-4 py-12 px-4 
-                sm:px-6 lg:px-8"
+                sm:px-6 lg:px-8
+                mb-10 md:mb-12 lg:mb-15 xl:mb-20 2xl:mb-30 3xl:mb-50
+                "
             >
                 {/* CEREMONIA */}
                 <motion.div
