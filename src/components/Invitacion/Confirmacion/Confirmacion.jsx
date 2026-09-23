@@ -444,14 +444,17 @@ export default function Confirmacion() {
     return (
         <motion.section
             className="
-                flex flex-col items-center justify-center
+                flex flex-col items-center justify-center min-h-screen
                 h-fit py-10
                 text-4xl
                 font-herr-von-muellerhoff
                 text-black
                 bg-cover bg-center bg-no-repeat
             "
-            style = {{ backgroundImage: `url(${fondo})` }}
+            style = {{ backgroundImage: `
+                linear-gradient(to top, transparent 90%, #F3EFE4 100%),    
+                url(${fondo})
+                ` }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{

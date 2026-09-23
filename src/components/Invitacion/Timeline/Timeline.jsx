@@ -140,8 +140,13 @@ export default function Timeline() {
                 flex h-fit flex-col items-center justify-center py-10 
                 text-4xl font-herr-von-muellerhoff text-black
                 bg-cover bg-center bg-no-repeat
+                mb-10 md:mb-12 lg:mb-15 xl:mb-20 2xl:mb-30 3xl:mb-50
                 "
-            style={{backgroundImage: `url(${fondo})`}}
+            style = {{ backgroundImage: `
+                linear-gradient(to top, transparent 90%, #F3EFE4 100%),    
+                linear-gradient(to bottom, transparent 90%, #F3EFE4 100%),    
+                url(${fondo})
+                ` }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{

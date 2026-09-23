@@ -15,7 +15,11 @@ export default function Dresscode() {
                 text-4xl font-herr-von-muellerhoff text-black
                 bg-cover bg-center bg-no-repeat
                 "
-                style={{backgroundImage: `url(${fondo})`}}
+                style = {{ backgroundImage: `
+                    linear-gradient(to top, transparent 90%, #F3EFE4 100%),    
+                    linear-gradient(to bottom, transparent 90%, #F3EFE4 100%),    
+                    url(${fondo})
+                    ` }}
             >
                 <motion.p
                 initial={{ opacity: 0 }}

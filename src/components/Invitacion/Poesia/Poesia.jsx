@@ -16,7 +16,10 @@ export default function Poesia() {
                 text-black font-baskervville
                 bg-cover bg-center bg-no-repeat
                 "
-                style = {{ backgroundImage: `url(${fondo})` }}
+                style = {{ backgroundImage: `
+                    linear-gradient(to top, transparent 80%, #F3EFE4 100%),    
+                    linear-gradient(to bottom, transparent 90%, #F3EFE4 100%),    
+                    url(${fondo})` }}
             >  
                 <motion.div
                     className="

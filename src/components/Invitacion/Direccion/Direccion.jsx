@@ -52,15 +52,15 @@ export default function Direccion() {
                     variants={itemVariants}
                 >
                     <motion.p
-                        className="text-4xl"
+                        className="sm:text-4xl md:text-5xl lg:text-[2rem] xl:text-6xl 2xl:text-[2.6rem] 3xl:text-7xl"
                         variants={itemVariants}
                     >
                         Ceremonia
                     </motion.p>
-                    <motion.p variants={itemVariants} className="font-herr-von-muellerhoff text-3xl">
+                    <motion.p variants={itemVariants} className="font-herr-von-muellerhoff sm:text-2xl md:text-3xl lg:text-[1.5rem] xl:text-4xl 2xl:text-[2.2rem] 3xl:text-5xl">
                         Parroquia Santa María de Jesús
                     </motion.p>
-                    <motion.p variants={itemVariants} className="font-baskervville text-3xl">
+                    <motion.p variants={itemVariants} className="font-baskervville sm:text-2xl md:text-3xl lg:text-[1.5rem] xl:text-4xl 2xl:text-[2.2rem] 3xl:text-5xl">
                         13:30
                     </motion.p>
                 </motion.div>
@@ -69,11 +69,11 @@ export default function Direccion() {
                     variants={itemVariants}
                 >
                     <motion.img 
-                        src={parroquia} alt="Salón las Adelfas" 
+                        src={parroquia} alt="Parroquía Santa María de Jesús" 
                         className="
                         h-full
                         bg-cover bg-center bg-no-repeat
-                        [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]
+                        [mask-image:radial-gradient(ellipse_at_center,#F3EFE4_50%,transparent_90%)]
                         "
                     />
                 </motion.div>
@@ -87,7 +87,7 @@ export default function Direccion() {
                         className="
                         h-full
                         bg-cover bg-center bg-no-repeat
-                        [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]
+                        [mask-image:radial-gradient(ellipse_at_center,#F3EFE4_50%,transparent_90%)]
                         "
                     />
                 </motion.div>
@@ -100,15 +100,15 @@ export default function Direccion() {
                     variants={itemVariants}
                 >
                     <motion.p
-                        className="text-4xl"
+                        className="sm:text-4xl md:text-5xl lg:text-[2rem] xl:text-6xl 2xl:text-[2.6rem] 3xl:text-7xl"
                         variants={itemVariants}
                     >
                         Celebración
                     </motion.p>
-                    <motion.p variants={itemVariants} className="font-herr-von-muellerhoff text-3xl">
+                    <motion.p variants={itemVariants} className="font-herr-von-muellerhoff sm:text-2xl md:text-3xl lg:text-[1.5rem] xl:text-4xl 2xl:text-[2.2rem] 3xl:text-5xl">
                         Salón las Adelfas
                     </motion.p>
-                    <motion.p variants={itemVariants} className="font-baskervville text-3xl">
+                    <motion.p variants={itemVariants} className="font-baskervville sm:text-2xl md:text-3xl lg:text-[1.5rem] xl:text-4xl 2xl:text-[2.2rem] 3xl:text-5xl">
                         15:00
                     </motion.p>
                 </motion.div>
