@@ -455,16 +455,20 @@ export default function Confirmacion() {
                 linear-gradient(to top, transparent 90%, #F3EFE4 100%),    
                 url(${fondo})
                 ` }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-                duration: 0.9,
-                ease: "easeInOut",
-            }}
         >
-            <p className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl">Confirmación</p>
+            <motion.p 
+                className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                    duration: 0.9,
+                    ease: "easeInOut",
+                }}
+            >
+                Confirmación
+            </motion.p>
 
-            <div
+            <motion.div
                 className="
                     flex flex-col items-center justify-center
                     w-xl md:w-2xl lg:w-3xl xl:w-5xl 2xl:w-7xl
@@ -476,6 +480,12 @@ export default function Confirmacion() {
                     font-baskervville
                     text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl
                 "
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                    duration: 0.9,
+                    ease: "easeInOut",
+                }}
             >
                 {!enviado ? (
                     <form
@@ -486,6 +496,7 @@ export default function Confirmacion() {
                             gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14
                             w-full                          
                         "
+                        
                     >
                         {/* =================================================
                             NOMBRE / APELLIDOS
@@ -718,7 +729,7 @@ export default function Confirmacion() {
                         ================================================= */}
 
                         {vieneAcompanado === "si" && (
-                            <motion.div
+                            <div
                                 className="
                                     flex
                                     flex-col
@@ -792,7 +803,7 @@ export default function Confirmacion() {
                                         )
                                     )}
                                 </select>
-                            </motion.div>
+                            </div>
                         )}
 
                         {/* =================================================
@@ -800,7 +811,7 @@ export default function Confirmacion() {
                         ================================================= */}
 
                         {acompanantes.length > 0 && (
-                            <motion.div
+                            <div
                                 className="
                                     flex
                                     flex-col
@@ -910,7 +921,7 @@ export default function Confirmacion() {
                                         </div>
                                     )
                                 )}
-                            </motion.div>
+                            </div>
                         )}
 
                         {/* =================================================
@@ -1493,7 +1504,7 @@ export default function Confirmacion() {
                         </p>
                     </motion.div>
                 )}
-            </div>
+            </motion.div>
 
             {/* =====================================================
                 IFRAME OCULTO PARA GOOGLE FORMS

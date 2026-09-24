@@ -8,9 +8,9 @@ export default function Fecha() {
         >
             <motion.div
                 className="
-                
                     flex flex-row items-center justify-center gap-2
-                    px-6 py-4
+                    px-8 md:px-10 lg:px-24 xl:px-32 2xl:px-40 3xl:px-48
+                    py-4
                     rounded-full
                     bg-[#526B5D]
                     font-baskervville text-4xl
@@ -32,9 +32,9 @@ export default function Fecha() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.4 }}
                 >
-                    <span className=" w-full py-[0.05rem] bg-white" />
+                    <span className="w-full py-[0.05rem] bg-white" />
                     <p>Abril</p>
-                    <span className=" w-full py-[0.05rem] bg-white" />
+                    <span className="w-full py-[0.05rem] bg-white" />
                 </motion.div>
 
                 <motion.p

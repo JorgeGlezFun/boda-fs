@@ -8,7 +8,8 @@ export default function Inicio() {
             className="
                 flex flex-col items-center justify-center min-h-screen 
                 bg-cover bg-center bg-no-repeat
-                font-ballet text-8xl text-[#6a837f]
+                font-ballet text-[#6a837f]
+                text-8xl
                 select-none 
                 mb-10 md:mb-12 lg:mb-15 xl:mb-20 2xl:mb-30 3xl:mb-50
                 "

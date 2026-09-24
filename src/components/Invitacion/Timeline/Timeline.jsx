@@ -147,16 +147,19 @@ export default function Timeline() {
                 linear-gradient(to bottom, transparent 90%, #F3EFE4 100%),    
                 url(${fondo})
                 ` }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-                duration: 0.9,
-                ease: "easeInOut",
-            }}
+
         >
-            <p className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl">
+            <motion.p 
+                className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                    duration: 0.9,
+                    ease: "easeInOut",
+                }}
+            >
                 Timeline
-            </p>
+            </motion.p>
 
             {/* CONTENEDOR DE TODA LA TIMELINE */}
             <div

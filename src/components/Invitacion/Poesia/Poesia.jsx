@@ -47,8 +47,12 @@ export default function Poesia() {
                 </motion.div>
                 <div className="
                     relative 
-                    top-40 md:top-48 lg:top-60 xl:top-72 2xl:top-66 3xl:top-60
-                    flex items-center justify-center rounded-full mx-6 backdrop-blur-md
+                    flex items-center justify-center rounded-full mx-6
+                    backdrop-blur-md
+                    top-40 md:top-46 lg:top-60 xl:top-70 2xl:top-66 3xl:top-60
+                    -left-2 lg:left-2 xl:left-3 2xl:left-5 3xl:left-12
+                    h-70 md:h-86 lg:h-112 xl:h-144 2xl:h-172 3xl:h-200
+                    w-45 md:w-52 lg:w-70 xl:w-88 2xl:w-106 3xl:w-125
                     ">
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -59,8 +63,8 @@ export default function Poesia() {
                         h-fit 
                         px-6
                         py-4
-                        w-40 md:w-44 lg:w-62 xl:w-88 2xl:w-96 3xl:w-96
-                        text-[12px] md:text-sm lg:text-lg xl:text-xl 2xl:text-3xl 3xl:text-4xl
+                        w-full
+                        text-[12px] md:text-sm lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl
                         text-center font-baskervville italic
                         "
                         >
@@ -77,7 +81,7 @@ export default function Poesia() {
                 <motion.div 
                     className="
                     relative 
-                    right-10 xl:right-15
+                    right-9 md:right-10 xl:right-15
                     bottom-5 w-fit
                     col-start-3 row-start-2 flex flex-col items-center justify-center 
                     px-2 xl:px-4

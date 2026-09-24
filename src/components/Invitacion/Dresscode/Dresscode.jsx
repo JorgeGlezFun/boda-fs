@@ -3,7 +3,7 @@ import fondo from "../../../assets/img/fondos/dresscode/fondo_dresscode.png";
 export default function Dresscode() {
 
     return (
-        <motion.section
+        <section
             className="flex flex-col items-center justify-center"
         >
             <motion.div
@@ -23,17 +23,17 @@ export default function Dresscode() {
                     ` }}
             >
                 <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                    duration: 0.9,
-                    ease: "easeInOut",
-                }}
-                className="
-                mb-4 lg:mb-0 
-                lg:pb-12 2xl:pb-16 3xl:pb-20
-                text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl
-                "
+                    className="
+                    mb-2 md:mb-4 lg:mb-0 
+                    lg:pb-12 2xl:pb-16 3xl:pb-20
+                    text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl
+                    "
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                        duration: 0.9,
+                        ease: "easeInOut",
+                    }}
                 >
                     Dresscode
                 </motion.p>
@@ -42,28 +42,40 @@ export default function Dresscode() {
                     flex flex-col items-center justify-center 
                     w-80 md:w-96 lg:w-102 xl:w-126 2xl:w-148 3xl:w-3xl
                     "
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                        duration: 0.9,
+                        ease: "easeInOut",
+                    }}
                 >
                     <motion.p 
                         className="
                         text-justify font-baskervville 
-                        text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl
+                        text-base md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl
                         px-2 md:px-4 lg:px-8 xl:px-8 3xl:px-10
-                        py-3 md:py-20 lg:py-20 xl:py-28 2xl:py-32 3xl:py-38
+                        py-6 md:py-10 lg:py-10 xl:py-14 2xl:py-16 3xl:py-12
                         mx-8 md:mx-10 lg:mx-0
                         mb-10 md:mb-8 lg:mb-16 xl:mb-18 2xl:mb-22 3xl:mb-28
                         lg:leading-relaxed
                         bg-[#F5F4EF]/35 backdrop-blur-md
                         "
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{
+                            duration: 0.9,
+                            ease: "easeInOut",
+                        }}
                     >
-                        Queremos que vengáis como más cómodos y vosotros mismos os sintáis. 
+                        Queremos que vengáis como más cómodos y vosotros mismos os sintáis. <br/><br/>
                         No hay un dress code estricto: elegid el look que más os guste y 
-                        con el que disfrutéis de este día. <br/>
-                        Solo tenemos una pequeña petición… dejemos el blanco para la novia. <br/>
+                        con el que disfrutéis de este día. <br/> <br/>
+                        Solo tenemos una pequeña petición… dejemos el blanco para la novia. <br/> <br/>
                         El resto, ¡libertad absoluta para vestir, combinar y disfrutar!
                     </motion.p>
                 </motion.div>
             </motion.div>
-        </motion.section>
+        </section>
     );
 }
 

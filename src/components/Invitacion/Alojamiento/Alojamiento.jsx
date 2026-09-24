@@ -42,36 +42,57 @@ export default function Alojamiento() {
                 linear-gradient(to top, transparent 80%, #F3EFE4 100%),    
                 linear-gradient(to bottom, transparent 90%, #F3EFE4 100%),    
                 url(${fondo})` }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-                duration: 0.9,
-                ease: "easeInOut",
-            }}
         >
-            <p className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl">Alojamiento</p>
+            <motion.p 
+                className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                    duration: 0.9,
+                    ease: "easeInOut",
+                }}
+            >
+                Alojamiento
+            </motion.p>
             <div className="grid grid-cols-1 grid-rows-5 grid-flow-col place-items-center gap-6">
-                {Object.values(hostales).map((hostal) => (
-                    <a className="
-                        group
-                        flex flex-row gap-4 w-full 
-                        h-32 3xl:h-52 
-                        px-28 3xl:px-36
-                        font-baskervville text-xl text-[#526B5D]
-                        rounded-xl bg-[#F5F4EF]/80 backdrop-blur-md overflow-hidden
-                        border-2 border-[#526B5D]
-                        hover:bg-[#526B5D] hover:-translate-y-3 hover:text-[#F5F4EF] transition-all duration-500
-                        active:bg-[#526B5D] active:translate-y-0 active:outline-4 active:outline-[#526B5D] active:outline-offset-4 active:text-[#F5F4EF]
+                {Object.values(hostales).map((hostal, index) => (
+                    <motion.a 
+                        className="
+                            group
+                            flex flex-row gap-4 w-full 
+                            h-32 3xl:h-52 
+                            px-28 3xl:px-36
+                            font-baskervville text-xl text-[#526B5D]
+                            rounded-xl bg-[#F5F4EF]/80 backdrop-blur-md overflow-hidden
+                            border-2 border-[#526B5D]
+                            hover:bg-[#526B5D] hover:-translate-y-3 hover:text-[#F5F4EF] transition-all duration-500
+                            active:bg-[#526B5D] active:translate-y-0 active:outline-4 active:outline-[#526B5D] active:outline-offset-4 active:text-[#F5F4EF]
                         "
                         href={hostal.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        >
+                        initial={{ 
+                            opacity: 0,
+                        }}
+                        animate={{ 
+                            opacity: 1,
+                        }}
+                        transition={{
+                            duration: 0.9,
+                            delay: index * 0.2,
+                            ease: "easeInOut",
+                        }}
+                    >
                         <div className="flex flex-col justify-center items-center w-full h-full gap-2">
-                            <p className="font-light xl:text-3xl 2xl:text-4xl 3xl:text-5xl">{hostal.nombre}</p>
-                            <p className="text-sm xl:text-xl 2xl:text-xl 3xl:text-4xl">{hostal.direccion}</p>
+                            <p className="font-light xl:text-3xl 2xl:text-4xl 3xl:text-5xl">
+                                {hostal.nombre}
+                            </p>
+
+                            <p className="text-sm xl:text-xl 2xl:text-xl 3xl:text-4xl">
+                                {hostal.direccion}
+                            </p>
                         </div>
-                    </a>
+                    </motion.a>
                 ))}
             </div>
         </motion.section>
