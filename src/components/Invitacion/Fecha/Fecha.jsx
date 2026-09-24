@@ -16,6 +16,7 @@ export default function Fecha() {
                     font-baskervville text-4xl
                     overflow-hidden
                     text-white
+                    
                 "
                 initial={{ width: 0 }}
                 whileInView={{ width: "fit-content" }}
